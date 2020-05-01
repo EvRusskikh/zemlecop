@@ -1,0 +1,22 @@
+/*COLORS*/
+$global-color: #333333;
+$global-primary-background: #e31e24;
+$global-secondary-background: #2b2c2e;
+$global-inverse-color: #fff;
+$global-muted-color: #9f9f9f;
+
+/*BREAKPOINTS*/
+$breakpoint-small: 480px !default;
+$breakpoint-medium: 767px !default;
+$breakpoint-large: 1200px !default;
+$breakpoint-xlarge: 1400px !default;
+$breakpoint-xsmall-max: ($breakpoint-small - 1) !default;
+$breakpoint-small-max: ($breakpoint-medium - 1) !default;
+$breakpoint-medium-max: ($breakpoint-large - 1) !default;
+$breakpoint-large-max: ($breakpoint-xlarge - 1) !default;
+
+/*FONT-SIZE*/
+$font-size-medium: 14px;
+$font-size-small: 12px;
+
+$container-max-width: 1320px;

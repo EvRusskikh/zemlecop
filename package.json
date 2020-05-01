@@ -4,7 +4,9 @@
   "description": "",
   "main": "gulpfile.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "gulp",
+    "build": "gulp build"
   },
   "author": "Russkikh Evgeniia",
   "license": "ISC",
@@ -25,7 +27,7 @@
     "require-dir": "^1.2.0"
   },
   "dependencies": {
-    "normalize.css": "^8.0.1",
-    "gulp-cli": "^2.2.0"
+    "gulp-cli": "^2.2.0",
+    "uikit": "^3.4.3-dev.e996de384"
   }
 }

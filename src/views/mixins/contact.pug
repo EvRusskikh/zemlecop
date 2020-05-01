@@ -1,0 +1,10 @@
+mixin contact(city, number, select)
+    .main-header__contact
+        if select
+            select.main-header__contact-city
+                option Калининград
+                option Омск
+                option(selected="selected")=city
+        else
+            .main-header__contact-city= city
+        .main-header__contact-number!= number

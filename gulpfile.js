@@ -4,7 +4,7 @@ const path = require('path'),
     prefix = require('gulp-autoprefixer'),
     sass = require('gulp-sass'),
     csso = require('gulp-csso'),
-    csscomb = require('gulp-csscomb'),
+    // csscomb = require('gulp-csscomb'),
     plumber = require('gulp-plumber'),
     uglify = require('gulp-uglify'),
     concat = require('gulp-concat'),
@@ -17,19 +17,29 @@ const path = require('path'),
 const paths = {
     app: './src/',
     dist: './dist/',
-    pug: '/src/views/',
+    pug: './src/views/',
     sass: './src/styles/',
     css: './dist/styles/'
 };
 
+function browserSync() {
+    browsersync({
+        server: {
+            baseDir: 'dist'
+        },
+        notify: false
+    });
+}
+
 function views() {
-    return src([paths.pug + '*.pug', paths.pug + 'pages/*.pug'])
+    return src([paths.pug +'*.pug', paths.pug + 'pages/*.pug'])
         .pipe(plumber())
         .pipe(pug({
             pretty: true
         }))
         .pipe(plumber.stop())
         .pipe(dest(paths.dist))
+        .on('end', browsersync.reload)
 }
 
 function style() {
@@ -53,10 +63,11 @@ function style() {
         .pipe(prefix(['last 3 versions', '> 1%'], {
             cascade: true
         }))
-        .pipe(csscomb())
+        // .pipe(csscomb())
         .pipe(csso())
         .pipe(sourcemaps.write('.'))
         .pipe(dest(paths.css))
+        .on('end', browsersync.reload)
     );
 }
 
@@ -65,6 +76,7 @@ function script() {
         .pipe(concat('main.js'))
         .pipe(uglify())
         .pipe(dest(path.dist + 'js/'))
+        .on('end', browsersync.reload)
 }
 
 function fonts() {
@@ -73,17 +85,8 @@ function fonts() {
 }
 
 function images() {
-    return src([paths.app + 'images/*.*', paths.app + 'images/**/*.*'])
-        .pipe(dest(paths.dist + 'images/'));
-}
-
-function browserSync() {
-    browsersync({
-        server: {
-            baseDir: 'dist'
-        },
-        notify: false
-    });
+    return src([paths.app + 'img/*.*', paths.app + 'img/**/*.*'])
+        .pipe(dest(paths.dist + 'img/'));
 }
 
 function watchFiles() {
@@ -103,17 +106,12 @@ function watchFiles() {
         series(script)
     );
     watch(
-        [paths.app + 'images/*.*', paths.app + 'images/**/*.*'],
+        [paths.app + 'img/*.*', paths.app + 'img/**/*.*'],
         { events: 'all', ignoreInitial: false },
-        series(images())
+        series(images)
     );
 }
 
-exports.views = views;
-exports.style = style;
-exports.script = script;
-exports.fonts = fonts;
 exports.images = images;
-exports.watch = watchFiles;
 exports.build = series(views, fonts, images, style, script);
-exports.default = parallel(browserSync, watchFiles);
+exports.default = parallel(fonts, browserSync, watchFiles);
