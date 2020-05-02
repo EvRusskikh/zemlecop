@@ -1,0 +1,21 @@
+extends main
+
+block vars
+
+block content
+    .main-wrapper__title-block
+        .breadcrumbs
+            .uk-container
+                ul.uk-breadcrumb.breadcrumbs__list
+                    li
+                        a(href="/") Главная
+                    each val, index in breadcrumbs
+                        li
+                            if (index !== breadcrumbs.length - 1)
+                                a(href=val.url)= val.title
+                            else
+                                span= val.title
+
+        .uk-container
+            div
+                h1= title

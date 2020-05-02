@@ -1,3 +1,5 @@
+$global-font-family: 'Roboto', "Helvetica Neue", Arial, sans-serif;
+
 /*COLORS*/
 $global-color: #333333;
 $global-primary-background: #e31e24;
@@ -23,6 +25,7 @@ $breakpoint-medium-max: ($breakpoint-large - 1);
 $breakpoint-large-max: ($breakpoint-xlarge - 1);
 
 /*FONT-SIZE*/
+$global-xxlarge-font-size: 50px;
 $font-size-medium: 18px;
 $font-size-small: 14px;
 $font-size-xsmall: 12px;

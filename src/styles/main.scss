@@ -16,6 +16,16 @@
   &__content {
     flex: 1 0 auto;
   }
+
+  &__title-block {
+    margin-top: 35px;
+    background: #eaeef1;
+  }
+}
+
+h1 {
+  margin-top: 35px;
+  margin-bottom: 40px;
 }
 
 @media (max-width: $breakpoint-small-max) {
@@ -30,3 +40,4 @@
 @import "components/header/top-menu";
 @import "components/header/header-card";
 @import "components/footer/footer";
+@import "components/breadcrumbs/breadcrumbs";

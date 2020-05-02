@@ -3,19 +3,21 @@
         nav.uk-navbar-container.uk-navbar-transparent(uk-navbar="mode: click")
             .uk-navbar-left
                 ul.uk-navbar-nav.top-menu__nav(aria-hidden="false" hidden)
-                    li.top-menu__parent-item
-                        a.uk-navbar-toggle(href="#")
-                            span(uk-navbar-toggle-icon class="uk-visible@m")
-                            span.top-menu__parent-text Каталог запчастей
-                            span(class="uk-hidden@m" uk-icon="icon: chevron-down")
-                        .uk-navbar-dropdown.top-menu__dropdown(offset="0")
-                            ul.uk-nav.uk-navbar-dropdown-nav.top-menu__dropdown-nav
-                                each val in ['Шурупы', 'Болты', 'Маслянные насосы']
-                                    li
-                                        a(href="#")= val
-                    each val in ['О компании', 'Статьи', 'Оплата', 'Доставка', 'Контакты', 'Личный кабинет']
-                        li
-                            a(href="#")= val
+                    each item in mainMenu
+                        if item.children
+                            li.top-menu__parent-item
+                                a.uk-navbar-toggle
+                                    span(uk-navbar-toggle-icon class="uk-visible@m")
+                                    span.top-menu__parent-text= item.title
+                                    span(class="uk-hidden@m" uk-icon="icon: chevron-down")
+                                .uk-navbar-dropdown.top-menu__dropdown(offset="0")
+                                    ul.uk-nav.uk-navbar-dropdown-nav.top-menu__dropdown-nav
+                                        each category in item.children
+                                            li
+                                                a(href=category.url ? category.url : '#')= category.title
+                        else
+                            li
+                                a(href=item.url ? item.url : '#')= item.title
 
                     li(class="uk-hidden@m")
                         .uk-margin.uk-margin-small-top

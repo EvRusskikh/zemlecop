@@ -1,3 +1,20 @@
+-
+    var mainMenu = [
+        {title: 'Каталог запчастей', url: '/catalog', children: [
+            {title: 'Шурупы'},
+            {title: 'Болты'},
+            {title: 'Маслянные насосы'}
+        ]},
+        {title: 'О компании', url: '/about'},
+        {title: 'Статьи', url: '/articles'},
+        {title: 'Оплата', url: '/payment'},
+        {title: 'Доставка', url: '/delivery'},
+        {title: 'Контакты', url: '/contacts'},
+        {title: 'Личный кабинет', url: '/cabinet'}
+    ]
+
+block vars
+
 doctype html
 html
     head
@@ -12,11 +29,9 @@ html
         script(src="/js/uikit-icons.min.js")
     body
         .main-wrapper
-            block header
-                include ../includes/header/header
+            include ../includes/header/header
 
             .main-wrapper__content
                 block content
 
-            block footer
-                include ../includes/footer/footer
+            include ../includes/footer/footer

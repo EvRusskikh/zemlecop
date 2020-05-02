@@ -6,9 +6,9 @@ footer.main-footer
                     img(src="/img/logo2.png" alt="zemlekop.pro")
             nav.uk-flex-1.footer-menu
                 ul.uk-nav.footer-menu__nav
-                    each val in ['Каталог запчастей', 'О компании', 'Статьи', 'Оплата', 'Доставка', 'Контакты', 'Личный кабинет']
+                    each item in mainMenu
                         li
-                            a(href="#")= val
+                            a(href=item.url ? item.url : '#')= item.title
             div
                 button.uk-button.uk-button-primary Заказать обратный звонок
                 div.uk-grid.uk-grid-medium.uk-flex-middle.main-footer__developer
