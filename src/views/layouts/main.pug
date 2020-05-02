@@ -11,10 +11,12 @@ html
         script(src="/js/uikit.min.js")
         script(src="/js/uikit-icons.min.js")
     body
-        block header
-            include ../includes/header/header
+        .main-wrapper
+            block header
+                include ../includes/header/header
 
-        block content
+            .main-wrapper__content
+                block content
 
-        block footer
-            include ../includes/footer/footer
+            block footer
+                include ../includes/footer/footer

@@ -1,3 +1,147 @@
 .main-header {
-  padding-top: 50px;
+  color: #2f2e2d;
+  
+  &__grid {
+    position: relative;
+  }
+
+  &__top {
+    padding-top: 50px;
+    padding-bottom: 40px;
+  }
+
+  &__toggle {
+    padding: 0;
+  }
+
+  &__search {
+    max-width: 260px;
+
+    .uk-input {
+      font-size: $font-size-small;
+      border-color: #f4f4f4;
+    }
+
+    .uk-input::placeholder {
+      font-style: italic;
+    }
+  }
+
+  &__contact {
+    line-height: $heading-small-line-height;
+  }
+
+  &__contact-city {
+    font-size: $font-size-xsmall;
+  }
+
+  select.main-header__contact-city {
+    padding-right: 8px;
+    border: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: transparent;
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNSIgaGVpZ2h0PSI1IiB2aWV3Qm94PSIwIDAgNSA1IiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgo8cGF0aCBkPSJNMy45NTkxIDEuNTM2MDVMMi40MjMwNiA0LjE5NjU2TDAuODg3MDA5IDEuNTM2MDVMMy45NTkxIDEuNTM2MDVaIiBmaWxsPSIjMkYyRTJEIi8+Cjwvc3ZnPgo=);
+    background-repeat: no-repeat;
+    background-position: 100% 50%;
+    color: inherit;
+    cursor: pointer;
+
+    &:focus {
+      outline: none;
+    }
+
+    option {
+      color: $global-color;
+    }
+  }
+
+  &__contact-number {
+    margin-top: 8px;
+    font-size: $font-size-medium;
+
+    span {
+      color: $global-primary-background;
+    }
+  }
+}
+
+@media (max-width: $breakpoint-large-max) {
+  .main-header {
+    &__contact-number {
+      font-size: inherit;
+    }
+
+    &__grid {
+      margin-left: -$global-gutter;
+
+      > * {
+        padding-left: $global-gutter;
+      }
+    }
+
+    .uk-button:not(.main-header__toggle) {
+      padding: 0 $global-small-gutter;
+    }
+  }
+}
+
+@media (max-width: $breakpoint-medium-max) {
+  .main-header {
+    &__top {
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+
+    &__right {
+      padding-right: 60px;
+    }
+  }
+}
+
+@media (max-width: $breakpoint-small-max) {
+  .main-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-width: 320px;
+    background: $global-inverse-color;
+    border-bottom: 1px solid $global-secondary-background;
+    z-index: 10;
+
+    &__grid {
+      margin-left: 0;
+
+      > * {
+        padding-left: 0;
+      }
+    }
+
+    &__left {
+      width: 100%;
+      padding-right: 60px;
+    }
+
+    &__left &__grid {
+      padding-left: 60px;
+      justify-content: center;
+    }
+
+    &__right {
+      display: none;
+      padding-right: 0;
+    }
+
+    &__toggle {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    &__top {
+      padding-top: $global-small-gutter;
+      padding-bottom: $global-small-gutter;
+    }
+  }
 }

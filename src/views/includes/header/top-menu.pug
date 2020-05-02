@@ -2,13 +2,14 @@
     .uk-container
         nav.uk-navbar-container.uk-navbar-transparent(uk-navbar="mode: click")
             .uk-navbar-left
-                ul.uk-navbar-nav.top-menu__nav
+                ul.uk-navbar-nav.top-menu__nav(aria-hidden="false" hidden)
                     li.top-menu__parent-item
                         a.uk-navbar-toggle(href="#")
-                            span(uk-navbar-toggle-icon)
+                            span(uk-navbar-toggle-icon class="uk-visible@m")
                             span.top-menu__parent-text Каталог запчастей
-                        .uk-navbar-dropdown.top-menu__dropdown
-                            ul.uk-nav.uk-navbar-dropdown-nav
+                            span(class="uk-hidden@m" uk-icon="icon: chevron-down")
+                        .uk-navbar-dropdown.top-menu__dropdown(offset="0")
+                            ul.uk-nav.uk-navbar-dropdown-nav.top-menu__dropdown-nav
                                 each val in ['Шурупы', 'Болты', 'Маслянные насосы']
                                     li
                                         a(href="#")= val
@@ -16,13 +17,17 @@
                         li
                             a(href="#")= val
 
+                    li(class="uk-hidden@m")
+                        .uk-margin.uk-margin-small-top
+                            +contact('Санкт-Петербург', '+7 <span>(812)</span> 448-61-41', true)
+
+                    li(class="uk-hidden@m")
+                        div.uk-margin.uk-margin-small-top
+                            include search
+
+                    li(class="uk-hidden@m")
+                        div.uk-margin.uk-margin-small-top
+                            button.uk-button.uk-button-primary Заказать обратный звонок
+
             .uk-navbar-right
-                a(href="#").top-menu__card
-                    span.top-menu__card-icon
-                        svg(width="15" height="14" viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg")
-                            path(fill-rule="evenodd" clip-rule="evenodd"
-                                d="M4 0H0V1H3V11H4H14V10H4V9H5H6H14V8V3H15V2H4V1V0ZM13 3H12V8H13V3ZM11 3V8H10V3H11ZM9" +
-                                " 3H8V8H9V3ZM7 3V8H6V3H7ZM5 3H4V8H5V3ZM6 12V14H4V12H6ZM13 14V12H11V14H13Z" fill="white")
-                    span.top-menu__card-info
-                        |В корзине: 99<br>
-                        |На сумму: 1520 р.
+                include card

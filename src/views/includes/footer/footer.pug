@@ -1,0 +1,20 @@
+footer.main-footer
+    .uk-container
+        .uk-grid.uk-grid-large.main-footer__top
+            div(class="uk-visible@m")
+                a(href="/" title="zemlekop.pro").main-footer__logo
+                    img(src="/img/logo2.png" alt="zemlekop.pro")
+            nav.uk-flex-1.footer-menu
+                ul.uk-nav.footer-menu__nav
+                    each val in ['Каталог запчастей', 'О компании', 'Статьи', 'Оплата', 'Доставка', 'Контакты', 'Личный кабинет']
+                        li
+                            a(href="#")= val
+            div
+                button.uk-button.uk-button-primary Заказать обратный звонок
+                div.uk-grid.uk-grid-medium.uk-flex-middle.main-footer__developer
+                    div
+                        a.main-footer__developer-logo(href="https://1pos.ru/" title="pos.ru" target="_blank")
+                            img(src="/img/ipos.png" alt="1pos")
+                    div Разработка<br/>и продвижение
+
+        .main-footer__copyright Copyright © zemlekop.pro 2020 Все права защищены

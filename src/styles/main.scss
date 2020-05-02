@@ -1,7 +1,32 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900');
 @import "./helpers/variables";
+
 @import "../../node_modules/uikit/src/scss/variables-theme";
 @import "../../node_modules/uikit/src/scss/mixins-theme";
 @import "../../node_modules/uikit/src/scss/uikit-theme";
 
+@import "helpers/template-style";
+
+.main-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-width: 320px;
+
+  &__content {
+    flex: 1 0 auto;
+  }
+}
+
+@media (max-width: $breakpoint-small-max) {
+  .main-wrapper {
+    &__content {
+      padding-top: 73px;
+    }
+  }
+}
+
 @import "components/header/header";
 @import "components/header/top-menu";
+@import "components/header/header-card";
+@import "components/footer/footer";
