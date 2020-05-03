@@ -3,3 +3,17 @@ extends ../layouts/default
 block vars
     - var title = 'Статьи';
     - var breadcrumbs = [{title: 'Статьи'}];
+    - var textClass = 'horizontal'
+
+block main-section
+
+    section.main-wrapper__section
+        .uk-container
+            .uk-margin-large-bottom
+                include ../includes/articles/articles
+
+    section.main-wrapper__section.main-wrapper__section--border
+        .uk-container
+            .uk-margin-bottom
+                include ../includes/articles/text
+

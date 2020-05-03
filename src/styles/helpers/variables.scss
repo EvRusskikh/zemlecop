@@ -7,6 +7,7 @@ $global-secondary-background: #2b2c2e;
 $global-menu-color: #394046;
 $global-inverse-color: #fff;
 $global-muted-color: #9f9f9f;
+$global-muted-background: #f5f5f5;
 $global-link-color: $global-primary-background;
 $global-link-hover-color: $global-link-color;
 $global-border: #e0e0e0;
@@ -26,6 +27,7 @@ $breakpoint-large-max: ($breakpoint-xlarge - 1);
 
 /*FONT-SIZE*/
 $global-xxlarge-font-size: 50px;
+$global-xlarge-font-size: 35px;
 $font-size-medium: 18px;
 $font-size-small: 14px;
 $font-size-xsmall: 12px;
@@ -37,3 +39,5 @@ $grid-medium-gutter-horizontal: 20px;
 $grid-medium-gutter-vertical: $grid-medium-gutter-horizontal;
 $grid-large-gutter-horizontal: 70px;
 $grid-large-gutter-horizontal-l: 100px;
+
+$global-transition: 0.1s ease-in-out;

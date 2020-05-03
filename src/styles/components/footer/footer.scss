@@ -15,7 +15,7 @@
   &__logo,
   &__developer-logo {
     display: block;
-    transition: 0.1s ease-in-out;
+    transition: $global-transition;
 
     &:hover,
     &:focus {

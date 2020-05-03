@@ -1,16 +1,16 @@
 -
     var mainMenu = [
-        {title: 'Каталог запчастей', url: '/catalog', children: [
+        {title: 'Каталог запчастей', url: '/catalog.html', children: [
             {title: 'Шурупы'},
             {title: 'Болты'},
             {title: 'Маслянные насосы'}
         ]},
-        {title: 'О компании', url: '/about'},
-        {title: 'Статьи', url: '/articles'},
-        {title: 'Оплата', url: '/payment'},
-        {title: 'Доставка', url: '/delivery'},
-        {title: 'Контакты', url: '/contacts'},
-        {title: 'Личный кабинет', url: '/cabinet'}
+        {title: 'О компании', url: '/about.html'},
+        {title: 'Статьи', url: '/articles.html'},
+        {title: 'Оплата', url: '/payment.html'},
+        {title: 'Доставка', url: '/delivery.html'},
+        {title: 'Контакты', url: '/contacts.html'},
+        {title: 'Личный кабинет', url: '/cabinet.html'}
     ]
 
 block vars
@@ -31,7 +31,7 @@ html
         .main-wrapper
             include ../includes/header/header
 
-            .main-wrapper__content
+            .main-wrapper__container
                 block content
 
             include ../includes/footer/footer

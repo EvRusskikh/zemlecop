@@ -8,7 +8,7 @@
     border: 1px solid $global-primary-background;
     color: inherit;
     box-sizing: border-box;
-    transition: 0.1s ease-in-out;
+    transition: $global-transition;
 
     &:hover,
     &:focus {
@@ -30,7 +30,7 @@
     height: 100%;
     width: 50px;
     background: $global-primary-background;
-    transition: .1s ease-in-out;
+    transition: $global-transition;
 
     svg {
       position: relative;

@@ -1,0 +1,43 @@
+.articles {
+  margin-top: $global-margin;
+  margin-bottom: 0;
+  padding: 0;
+  list-style: none;
+
+  &__item {
+    display: block;
+    border: 1px solid $global-border;
+    color: $global-color;
+
+    &:hover,
+    &:focus {
+      color: $global-inverse-color;
+      text-decoration: none;
+    }
+  }
+
+  &__img {
+    height: 170px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
+  &__text {
+    padding: 20px 25px 35px;
+    transition: $global-transition;
+  }
+  
+  &__item:hover &__text,
+  &__item:focus &__text {
+    background-color: $global-primary-background;
+  }
+}
+
+@media (max-width: $breakpoint-xxsmall-max) {
+  .articles {
+    > li {
+      width: 100%;
+    }
+  }
+}

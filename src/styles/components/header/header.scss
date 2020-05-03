@@ -19,7 +19,7 @@
 
     .uk-input {
       font-size: $font-size-small;
-      border-color: #f4f4f4;
+      border-color: $global-border;
     }
 
     .uk-input::placeholder {
