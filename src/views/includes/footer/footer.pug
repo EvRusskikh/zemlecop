@@ -8,9 +8,13 @@ footer.main-footer
                 ul.uk-nav.footer-menu__nav
                     each item in mainMenu
                         li
-                            a(href=item.url ? item.url : '#')= item.title
+                            if item.toggle
+                                a(uk-toggle href=item.url ? item.url : '#')= item.title
+                            else
+                                a(href=item.url ? item.url : '#')= item.title
             div
-                button.uk-button.uk-button-primary Заказать обратный звонок
+                button.uk-button.uk-button-primary
+                    small Заказать обратный звонок
                 div.uk-grid.uk-grid-medium.uk-flex-middle.main-footer__developer
                     div
                         a.main-footer__developer-logo(href="https://1pos.ru/" title="pos.ru" target="_blank")

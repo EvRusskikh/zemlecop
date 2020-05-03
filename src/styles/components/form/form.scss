@@ -1,0 +1,45 @@
+.uk-button {
+  font-size: inherit;
+  text-transform: none;
+}
+
+.uk-button-default {
+  border-color: $global-primary-background;
+
+  &:hover,
+  &:active {
+    background: rgba(227, 30, 36, 0.05);
+    border-color: $global-link-hover-color;
+  }
+}
+
+.uk-form-label {
+  font-size: $font-size-medium;
+}
+
+.uk-form-stacked {
+  .uk-form-label {
+    margin-bottom: 10px;
+  }
+}
+
+.uk-input,
+.uk-select,
+.uk-textarea {
+  border-radius: 2px;
+  padding: 0 $global-margin;
+}
+
+.uk-input--search {
+    font-size: $font-size-small;
+}
+
+.uk-input--search::placeholder {
+  font-style: italic;
+}
+
+.uk-form {
+  &-btns {
+    margin-top: 30px;
+  }
+}

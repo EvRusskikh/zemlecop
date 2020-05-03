@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html class="uk-modal-page">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -172,37 +172,7 @@
         </div>
       </footer>
     </div>
-    <div class="uk-flex-top" id="modal-login" uk-modal>
-      <div class="uk-modal-dialog uk-margin-auto-vertical uk-modal-body">
-        <button class="uk-modal-close-outside" type="button" uk-close></button>
-        <h2 class="uk-modal-title">Войти в личный кабинет</h2>
-        <form class="uk-form-stacked">
-          <div class="uk-margin">
-            <label class="uk-form-label" for="user-email">E-mail <span class="uk-text-primary">*</span></label>
-            <div class="uk-form-controls">
-              <input class="uk-input" id="user-email" type="text" placeholder="client@mail.com">
-            </div>
-          </div>
-          <div class="uk-margin">
-            <label class="uk-form-label" for="user-password">Пароль <span class="uk-text-primary">*</span></label>
-            <div class="uk-form-controls">
-              <input class="uk-input" id="user-password" type="password" placeholder="******">
-            </div>
-          </div>
-          <div class="uk-form-btns"><a class="uk-link">Забыли пароль?</a>
-            <div class="uk-margin-top uk-grid uk-grid-medium uk-child-width-1-1 uk-child-width-auto@s" uk-grid>
-              <div class="uk-flex-1">
-                <button class="uk-button uk-button-primary uk-width-1-1" type="submit">Войти</button>
-              </div>
-              <div>
-                <button class="uk-button uk-button-default uk-width-1-1" type="button" uk-toggle="target: #modal-registration">Зарегистрироваться</button>
-              </div>
-            </div>
-          </div>
-        </form>
-      </div>
-    </div>
-    <div class="uk-flex-top" id="modal-registration" uk-modal>
+    <div class="uk-flex-top uk-open uk-flex" id="modal-registration" uk-modal>
       <div class="uk-modal-dialog uk-margin-auto-vertical uk-modal-body">
         <button class="uk-modal-close-outside" type="button" uk-close></button>
         <h2 class="uk-modal-title">Зарегистрироваться</h2>111

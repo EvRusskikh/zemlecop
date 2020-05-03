@@ -17,7 +17,10 @@
                                                 a(href=category.url ? category.url : '#')= category.title
                         else
                             li
-                                a(href=item.url ? item.url : '#')= item.title
+                                if item.toggle
+                                    a(uk-toggle href=item.url ? item.url : '#')= item.title
+                                else
+                                    a(href=item.url ? item.url : '#')= item.title
 
                     li(class="uk-hidden@m")
                         .uk-margin.uk-margin-small-top

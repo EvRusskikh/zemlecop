@@ -10,13 +10,13 @@
         {title: 'Оплата', url: '/payment.html'},
         {title: 'Доставка', url: '/delivery.html'},
         {title: 'Контакты', url: '/contacts.html'},
-        {title: 'Личный кабинет', url: '/cabinet.html'}
+        {title: 'Личный кабинет', url: '#modal-login', toggle: true}
     ]
 
 block vars
 
 doctype html
-html
+html(class=htmlClass)
     head
         meta(charset="utf-8")
         meta(http-equiv="X-UA-Compatible" content="IE=edge")
@@ -35,3 +35,7 @@ html
                 block content
 
             include ../includes/footer/footer
+
+        block modal
+            include  ../includes/modal/login
+            include  ../includes/modal/registration

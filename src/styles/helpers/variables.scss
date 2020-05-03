@@ -4,14 +4,16 @@ $global-font-family: 'Roboto', "Helvetica Neue", Arial, sans-serif;
 $global-color: #333333;
 $global-primary-background: #e31e24;
 $global-secondary-background: #2b2c2e;
+$global-third-background: #eaeef1;
 $global-menu-color: #394046;
 $global-inverse-color: #fff;
 $global-muted-color: #9f9f9f;
 $global-muted-background: #f5f5f5;
-$global-link-color: $global-primary-background;
-$global-link-hover-color: $global-link-color;
 $global-border: #e0e0e0;
-$form-placeholder-color: #8e8e8e;
+$form-focus-border: #9f9f9f;
+$form-placeholder-color: #bebebe;
+$global-link-color: $global-primary-background;
+$global-link-hover-color: darken($global-primary-background, 10%);
 
 /*BREAKPOINTS*/
 $breakpoint-xsmall: 480px;
@@ -31,6 +33,7 @@ $global-xlarge-font-size: 35px;
 $font-size-medium: 18px;
 $font-size-small: 14px;
 $font-size-xsmall: 12px;
+$base-small-font-size: $font-size-xsmall;
 $font-size-xxsmall: 10px;
 
 $container-max-width: 1320px;

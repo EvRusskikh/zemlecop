@@ -1,0 +1,66 @@
+.uk-modal {
+  min-width: 290px;
+  background: rgba(0, 0, 0, 0.7);
+
+  &-dialog {
+    width: 540px;
+    padding: 40px 70px 50px;
+  }
+
+  &-title {
+    margin-bottom: 30px;
+    font-size: 30px;
+    line-height: 1.2;
+    text-align: center;
+  }
+
+  &-close-outside {
+    right: 0;
+    padding: 12px;
+    border-radius: 2px;
+    background: $global-primary-background;
+    transition: $global-transition;
+
+    svg {
+      width: 16px;
+      height: 16px;
+
+      line {
+        stroke-width: 2;
+        stroke-linecap: round;
+      }
+    }
+
+    &:hover,
+    &:focus {
+      background: $button-primary-hover-background;
+    }
+  }
+}
+
+@media (max-width: $breakpoint-small-max) {
+  .uk-modal {
+    &-dialog {
+      padding: $global-gutter 40px 40px;
+    }
+
+    &-close-outside {
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+  }
+}
+
+@media (max-width: $breakpoint-xxsmall-max) {
+  .uk-modal {
+    &-dialog {
+      padding: $global-margin;
+    }
+
+    &-title {
+      margin-bottom: 20px;
+      font-size: 24px;
+    }
+  }
+}
+

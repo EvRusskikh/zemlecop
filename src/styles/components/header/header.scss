@@ -16,15 +16,6 @@
 
   &__search {
     max-width: 260px;
-
-    .uk-input {
-      font-size: $font-size-small;
-      border-color: $global-border;
-    }
-
-    .uk-input::placeholder {
-      font-style: italic;
-    }
   }
 
   &__contact {
