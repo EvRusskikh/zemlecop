@@ -28,6 +28,7 @@
 .uk-textarea {
   border-radius: 2px;
   padding: 0 $global-margin;
+  font-size: $font-size-medium;
 }
 
 .uk-input--search {
@@ -41,5 +42,9 @@
 .uk-form {
   &-btns {
     margin-top: 30px;
+
+    .uk-button {
+      min-width: 160px;
+    }
   }
 }

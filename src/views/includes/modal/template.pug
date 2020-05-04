@@ -5,4 +5,13 @@ block modal-vars
         button.uk-modal-close-outside(type="button" uk-close)
         h2.uk-modal-title
             block modal-title
-        block modal-body
+        form.uk-form-stacked
+            block modal-form-before
+            each item in form
+                .uk-margin
+                    label.uk-form-label(for=item.id)= item.label
+                        if (item.recovery)
+                            span.uk-text-primary &nbsp;*
+                    .uk-form-controls
+                        input.uk-input(id=item.id type=item.type ? item.type : "text" placeholder=item.placeholder)
+            block modal-form-buttons
