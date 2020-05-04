@@ -1,0 +1,95 @@
+-
+    var tableBody = [
+        {
+            type: "Шурупы",
+            name: "Шуруп",
+            img: "/img/20K.png",
+            carraro: "20K",
+            developer: "20К-23-31290",
+            weight: "0.12",
+            ekb: "0",
+            ekb2: "0",
+            msk: "23",
+            spb: "5",
+            tranzit: "0",
+            price: "560"
+        },
+        {
+            type: "Маслянный насос",
+            name: "Шуруп",
+            img: "/img/20K.png",
+            carraro: "20K",
+            developer: "20К-23-31290",
+            weight: "0.12",
+            ekb: "0",
+            ekb2: "0",
+            msk: "23",
+            spb: "5",
+            tranzit: "0",
+            price: "560"
+        },
+        {
+            type: "Болты",
+            name: "Шуруп",
+            img: "/img/20K.png",
+            carraro: "20K",
+            developer: "20К-23-31290",
+            weight: "0.12",
+            ekb: "0",
+            ekb2: "0",
+            msk: "23",
+            spb: "5",
+            tranzit: "0",
+            price: "560"
+        }
+    ]
+
+.catalog(uk-filter="target: .catalog__list")
+    ul.uk-margin-bottom.uk-subnav.catalog-filter
+        li.uk-active(uk-filter-control)
+            a(href="#") Все
+        each item in mainMenu[0].children
+            li(uk-filter-control="[data-type="+ item.title +"]")
+                a(href="#")= item.title
+
+    include catalog-search
+
+    table.uk-table.catalog__content
+        thead.catalog__head
+            tr
+                th.catalog__img
+                th.catalog__name Наименование
+                th.catalog__col1 № по Carraro
+                th.catalog__col1 № производителя
+                th.catalog__col2 Вес, кг
+                th.catalog__col3 Екб
+                th.catalog__col3 Екб 2
+                th.catalog__col3 Мск
+                th.catalog__col3 Спб
+                th.catalog__col2 Транзит
+                th.catalog__col2 Цена, руб
+                th.catalog__number Кол-во
+                th.catalog__btn
+        tbody.catalog__list
+            each item in tableBody
+                tr(data-type=item.type)
+                    td
+                        img(src=item.img alt=item.name)
+                    td
+                        a(href="/catalog-item.html")=item.name
+                    td=item.carraro
+                    td=item.developer
+                    td=item.weight
+                    td=item.ekb
+                    td=item.ekb2
+                    td=item.msk
+                    td=item.spb
+                    td=item.tranzit
+                    td=item.price
+                    td
+                        input.uk-input.uk-form-small(type="text")
+                    td.catalog__btn
+                        button.uk-button.uk-button-primary.uk-button-small.uk-button-icon
+                            span.uk-icon
+                                svg(width="15" height="14" viewBox="0 0 15 14" xmlns="http://www.w3.org/2000/svg")
+                                    path(fill-rule="evenodd" clip-rule="evenodd" d="M4 0H0V1H3V11H4H14V10H4V9H5H6H14V8V3H15V2H4V1V0ZM13 3H12V8H13V3ZM11 3V8H10V3H11ZM9 3H8V8H9V3ZM7 3V8H6V3H7ZM5 3H4V8H5V3ZM6 12V14H4V12H6ZM13 14V12H11V14H13Z")

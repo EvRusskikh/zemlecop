@@ -18,7 +18,7 @@
   &-close-outside {
     right: 0;
     padding: 12px;
-    border-radius: 2px;
+    border-radius: $global-border-radius;
     background: $global-primary-background;
     transition: $global-transition;
 

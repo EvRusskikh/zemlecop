@@ -1,0 +1,82 @@
+.catalog {
+  &__content {
+    width: 100%;
+    table-layout: fixed;
+  }
+
+  &__head {
+    border-bottom: 2px solid $global-primary-background;
+  }
+
+  th {
+    padding: 15px 5px;
+    font-size: inherit;
+    line-height: 1.2;
+    text-transform: none;
+    color: $form-placeholder-color;
+  }
+
+  &__list {
+    tr {
+      border-bottom: 1px solid $global-muted-background;
+    }
+  }
+
+  td {
+    padding: 10px 5px;
+
+    &:last-of-type {
+      padding-right: 0;
+    }
+  }
+
+  &__img {
+    width: 50px;
+  }
+
+  &__number {
+    width: 70px;
+  }
+
+  &__btn {
+    width: 30px;
+
+    svg {
+      position: relative;
+      top: -1px;
+      left: -1px;
+    }
+  }
+
+  &__name {
+    width: 24%;
+  }
+
+  &__col1 {
+    width: 23%;
+  }
+
+  &__col2 {
+    width: 13%;
+  }
+
+  &__col3 {
+    width: 9%;
+  }
+}
+
+@media (max-width: $breakpoint-medium-max) {
+  .catalog {
+    &__content {
+      font-size: $font-size-small;
+    }
+
+    &__img {
+      width: 40px;
+    }
+
+    &__number {
+      width: 50px;
+    }
+  }
+}

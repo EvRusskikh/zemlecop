@@ -9,12 +9,12 @@ block content
                 ul.uk-breadcrumb.breadcrumbs__list
                     li
                         a(href="/") Главная
-                    each val, index in breadcrumbs
-                        li
-                            if (index !== breadcrumbs.length - 1)
+                    if breadcrumbs
+                        each val, index in breadcrumbs
+                            li
                                 a(href=val.url)= val.title
-                            else
-                                span= val.title
+                    li
+                        span= title
 
         .uk-container
             div

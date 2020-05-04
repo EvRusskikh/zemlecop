@@ -1,4 +1,5 @@
 .uk-button {
+  border-radius: $global-border-radius;
   font-size: inherit;
   text-transform: none;
 }
@@ -8,13 +9,22 @@
 
   &:hover,
   &:active {
-    background: rgba(227, 30, 36, 0.05);
+    background: rgba(227, 30, 36, 0.1);
     border-color: $global-link-hover-color;
   }
 }
 
+.uk-button-icon {
+  width: 40px;
+  padding: 0;
+
+  &.uk-button-small {
+    width: 30px;
+  }
+}
+
 .uk-form-label {
-  font-size: $font-size-medium;
+  font-size: inherit;
 }
 
 .uk-form-stacked {
@@ -26,9 +36,9 @@
 .uk-input,
 .uk-select,
 .uk-textarea {
-  border-radius: 2px;
+  border-radius: $global-border-radius;
   padding: 0 $global-margin;
-  font-size: $font-size-medium;
+  font-size: inherit;
 }
 
 .uk-input--search {
@@ -40,6 +50,8 @@
 }
 
 .uk-form {
+  font-size: $font-size-medium;
+
   &-btns {
     margin-top: 30px;
 

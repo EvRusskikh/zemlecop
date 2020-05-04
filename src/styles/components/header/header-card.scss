@@ -6,6 +6,7 @@
     align-items: center;
     height: 50px;
     border: 1px solid $global-primary-background;
+    border-radius: $global-border-radius;
     color: inherit;
     box-sizing: border-box;
     transition: $global-transition;
@@ -30,6 +31,8 @@
     align-items: center;
     height: 100%;
     width: 50px;
+    border-top-left-radius: $global-border-radius;
+    border-bottom-left-radius: $global-border-radius;
     background: $global-primary-background;
     transition: $global-transition;
 

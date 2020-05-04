@@ -14,21 +14,21 @@
                                     ul.uk-nav.uk-navbar-dropdown-nav.top-menu__dropdown-nav
                                         each category in item.children
                                             li
-                                                a(href=category.url ? category.url : '#')= category.title
+                                                a(href=category.url ? category.url : "#")= category.title
                         else
                             li
                                 if item.toggle
-                                    a(uk-toggle href=item.url ? item.url : '#')= item.title
+                                    a(uk-toggle href=item.url ? item.url : "#")= item.title
                                 else
-                                    a(href=item.url ? item.url : '#')= item.title
+                                    a(href=item.url ? item.url : "#")= item.title
 
                     li(class="uk-hidden@m")
                         .uk-margin.uk-margin-small-top
-                            +contact('Санкт-Петербург', '+7 <span>(812)</span> 448-61-41', true)
+                            +contact("Санкт-Петербург", "+7 <span>(812)</span> 448-61-41", true)
 
                     li(class="uk-hidden@m")
                         div.uk-margin.uk-margin-small-top
-                            include search
+                            include ../catalog/catalog-search
 
                     li(class="uk-hidden@m")
                         div.uk-margin.uk-margin-small-top

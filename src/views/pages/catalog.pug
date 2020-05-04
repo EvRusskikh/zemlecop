@@ -1,15 +1,13 @@
 extends ../layouts/default
 
 block vars
-    - var title = 'Статьи';
+    - var title = 'Каталог запчастей';
     - var textClass = 'horizontal'
 
 block main-section
-
     section.main-wrapper__section
         .uk-container
-            .uk-margin-large-bottom
-                include ../includes/articles/articles
+            include ../includes/catalog/catalog
 
     section.main-wrapper__section.main-wrapper__section--border
         .uk-container

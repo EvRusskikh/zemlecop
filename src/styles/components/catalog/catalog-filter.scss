@@ -1,0 +1,30 @@
+.catalog-filter {
+  margin-left: -10px;
+
+  > * {
+    padding-left: 10px;
+    margin-bottom: 10px;
+
+    > :first-child {
+      display: block;
+      padding: 5px 20px;
+      border-radius: $global-border-radius;
+      background: $global-border;
+      font-size: inherit;
+      text-transform: none;
+      color: inherit;
+      text-decoration: none;
+      transition: $global-transition;
+
+      &:hover,
+      &:focus {
+        background: $form-placeholder-color;
+      }
+    }
+
+    &.uk-active > :first-child {
+      background: $global-primary-background;
+      color: $global-inverse-color;
+    }
+  }
+}
