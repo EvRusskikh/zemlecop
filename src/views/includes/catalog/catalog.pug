@@ -3,7 +3,7 @@
         {
             type: "Шурупы",
             name: "Шуруп 1",
-            img: "/img/20K.png",
+            img: "./img/20K.png",
             carraro: "20K",
             developer: "20К-23-31290",
             weight: "0.12",
@@ -17,7 +17,7 @@
         {
             type: "Маслянные насосы",
             name: "Шуруп 2",
-            img: "/img/20K.png",
+            img: "./img/20K.png",
             carraro: "20K",
             developer: "20К-23-31290",
             weight: "0.12",
@@ -31,7 +31,7 @@
         {
             type: "Болты",
             name: "Шуруп 3",
-            img: "/img/20K.png",
+            img: "./img/20K.png",
             carraro: "20K",
             developer: "20К-23-31290",
             weight: "0.12",
@@ -76,7 +76,7 @@
                     td.catalog__img
                         img(src=item.img alt=item.name)
                     td.catalog__name
-                        a(href="/catalog-item.html")=item.name
+                        a(href="./catalog-item.html")=item.name
                     td
                         span(class="display-inline-block uk-margin-small-right uk-text-muted uk-hidden@m") № по Carraro:
                         span=item.carraro

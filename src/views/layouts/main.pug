@@ -1,15 +1,15 @@
 -
     var mainMenu = [
-        {title: "Каталог запчастей", url: "/catalog.html", children: [
+        {title: "Каталог запчастей", url: "./catalog.html", children: [
             {title: "Шурупы"},
             {title: "Маслянные насосы"},
             {title: "Болты"}
         ]},
-        {title: "О компании", url: "/about.html"},
-        {title: "Статьи", url: "/articles.html"},
-        {title: "Оплата", url: "/payment.html"},
-        {title: "Доставка", url: "/delivery.html"},
-        {title: "Контакты", url: "/contacts.html"},
+        {title: "О компании", url: "./about.html"},
+        {title: "Статьи", url: "./articles.html"},
+        {title: "Оплата", url: "./payment.html"},
+        {title: "Доставка", url: "./delivery.html"},
+        {title: "Контакты", url: "./contacts.html"},
         {title: "Личный кабинет", url: "#modal-login", toggle: true}
     ]
 
@@ -24,9 +24,9 @@ html(class=htmlClass)
         meta(name="description" content="")
         meta(name="viewport" content="width=device-width")
         title Землекоп
-        link(rel="stylesheet" href="/styles/main.css")
-        script(src="/js/uikit.min.js")
-        script(src="/js/uikit-icons.min.js")
+        link(rel="stylesheet" href="./styles/main.css")
+        script(src="./js/uikit.min.js")
+        script(src="./js/uikit-icons.min.js")
     body
         .main-wrapper
             include ../includes/header/header
