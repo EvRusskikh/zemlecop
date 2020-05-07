@@ -3,7 +3,7 @@
         {
             type: "Шурупы",
             name: "Шуруп 1",
-            img: "./img/20K.png",
+            img: "./img/goods/20K.png",
             carraro: "20K",
             developer: "20К-23-31290",
             weight: "0.12",
@@ -17,7 +17,7 @@
         {
             type: "Маслянные насосы",
             name: "Шуруп 2",
-            img: "./img/20K.png",
+            img: "./img/goods/20K.png",
             carraro: "20K",
             developer: "20К-23-31290",
             weight: "0.12",
@@ -31,7 +31,7 @@
         {
             type: "Болты",
             name: "Шуруп 3",
-            img: "./img/20K.png",
+            img: "./img/goods/20K.png",
             carraro: "20K",
             developer: "20К-23-31290",
             weight: "0.12",
@@ -53,6 +53,9 @@
                 a(href="#")= item.title
 
     include catalog-search
+
+    if searchResult
+        .catalog__result=searchResult
 
     table.uk-table.catalog__content
         thead.catalog__head
@@ -113,34 +116,3 @@
                                 svg(width="15" height="14" viewBox="0 0 15 14" xmlns="http://www.w3.org/2000/svg")
                                     path(fill-rule="evenodd" clip-rule="evenodd" d="M4 0H0V1H3V11H4H14V10H4V9H5H6H14V8V3H15V2H4V1V0ZM13 3H12V8H13V3ZM11 3V8H10V3H11ZM9 3H8V8H9V3ZM7 3V8H6V3H7ZM5 3H4V8H5V3ZM6 12V14H4V12H6ZM13 14V12H11V14H13Z")
 
-    ul.uk-pagination(uk-margin)
-        li(class="uk-hidden@s")
-            a(href="#")
-                span(uk-pagination-previous)
-        li
-            a(href="#") 1
-        li.uk-disabled(class="uk-hidden@s")
-            span ...
-        li.uk-active
-            a(href="#") 2
-        li(class="uk-visible@s")
-            a(href="#") 3
-        li.uk-disabled
-            span ...
-        li(class="uk-visible@s")
-            a(href="#") 11
-        li(class="uk-visible@s")
-            a(href="#") 12
-        li(class="uk-visible@s")
-            a(href="#") 13
-        li.uk-disabled(class="uk-visible@s")
-            span ...
-        li(class="uk-visible@s")
-            a(href="#") 21
-        li(class="uk-visible@s")
-            a(href="#") 22
-        li
-            a(href="#") 23
-        li(class="uk-hidden@s")
-            a(href="#")
-                span(uk-pagination-next)

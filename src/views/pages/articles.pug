@@ -1,8 +1,8 @@
 extends ../layouts/default
+include ../mixins/loremText
 
 block vars
     - var title = 'Статьи';
-    - var textClass = 'horizontal'
 
 block main-section
 
@@ -13,5 +13,4 @@ block main-section
 
     section.main-wrapper__section.main-wrapper__section--border
         .uk-container
-            .uk-margin-bottom
-                include ../includes/articles/text
+            +loremText(true, "uk-child-width-1-2@s")

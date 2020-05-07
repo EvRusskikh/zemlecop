@@ -1,0 +1,39 @@
+extends ../layouts/default
+include ../mixins/loremText
+
+block vars
+    - var title = 'О компании';
+
+block main-section
+    section.main-wrapper__section
+        .uk-container
+            div
+                h2 Запчасти для спецтехники
+                .uk-grid.uk-flex-row-reverse(class="uk-child-width-1-2@s")
+                    .column-text__img.uk-margin-medium-bottom
+                        img(src="./img/articles/31.png")
+                    div
+                        +loremText(false, "")
+
+            div
+                h3 Запчасти для спецтехники
+                p
+                    |Компания CARRARO создана в 1930 году и является одним из крупнейших мировым производителей трансмиссий для сельскохозяйственной, строительной, погрузочной и горно-добывающей техники.
+                    | Заводы CARRARO по производству компонентов для трансмиссий, а также трансмиссий в сборе расположены в Италии (7 заводов), Германии, США, Аргентине, Бразилии и Индии.
+                ul
+                    li Пункт
+                    li Пункт
+                    li Пункт
+
+                .uk-margin-medium
+                    .uk-overflow-auto
+                        table
+                            thead
+                                tr
+                                    - for (var x = 0; x < 4; x++)
+                                        th Шапка
+                            tbody
+                                - for (var i = 0; i < 5; i++)
+                                    tr
+                                        - for (var j = 0; j < 4; j++)
+                                            td Ячейка

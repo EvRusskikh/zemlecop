@@ -1,0 +1,10 @@
+extends ../layouts/default
+
+block vars
+    - var title = 'Результат поиска';
+    - var searchResult = "По запросу “20K-323” найдено 3 результата:";
+
+block main-section
+    section.main-wrapper__section
+        .uk-container
+            include ../includes/catalog/catalog

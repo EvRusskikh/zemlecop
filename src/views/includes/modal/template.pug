@@ -13,5 +13,5 @@ block modal-vars
                         if (item.recovery)
                             span.uk-text-primary &nbsp;*
                     .uk-form-controls
-                        input.uk-input(id=item.id type=item.type ? item.type : "text" placeholder=item.placeholder)
+                        input.uk-input(id=item.id type=item.type ? item.type : "text" autocomplete=item.autocomplete placeholder=item.placeholder)
             block modal-form-buttons

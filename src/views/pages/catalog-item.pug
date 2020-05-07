@@ -3,7 +3,6 @@ extends ../layouts/default
 block vars
     - var breadcrumbs = [{title: "Каталог запчастей", url: "/catalog.html"}];
     - var title = "Маслянный насос";
-    - var textClass = "horizontal"
     -
         var good = {
             info: [
@@ -39,7 +38,7 @@ block main-section
                 div
 
             .uk-margin-top
-                ul(uk-tab)
+                ul.uk-tab(uk-tab)
                     li.uk-active
                         a(href="") Описание
                     li

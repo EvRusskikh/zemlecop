@@ -69,6 +69,10 @@
   &__col3 {
     width: 9%;
   }
+
+  &__result {
+    margin: $global-gutter 0;
+  }
 }
 
 @media (max-width: $breakpoint-medium-max) {

@@ -6,15 +6,17 @@ block modal-vars
         var form = [
             {
                 label: "E-mail",
-                id: "user-email",
+                id: "login-user-email",
                 placeholder: "client@mail.com",
                 type: "email",
+                autocomplete: "off",
                 recovery: true
             },
             {
                 label: "Пароль",
-                id: "user-password",
+                id: "login-user-password",
                 placeholder: "******",
+                autocomplete: "new-password",
                 type: "password",
                 recovery: true
             }
