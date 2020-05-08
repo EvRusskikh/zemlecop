@@ -1,4 +1,4 @@
-mixin contact(city, number, select)
+mixin contact(city, numberHref, number, select)
     .main-header__contact
         if select
             select.main-header__contact-city
@@ -7,4 +7,5 @@ mixin contact(city, number, select)
                 option(selected="selected")=city
         else
             .main-header__contact-city= city
-        .main-header__contact-number!= number
+        .main-header__contact-number
+            a(href="telto: " + numberHref)!= number

@@ -50,6 +50,11 @@
   &__contact-number {
     margin-top: 8px;
     font-size: $font-size-medium;
+    
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
     span {
       color: $global-primary-background;
