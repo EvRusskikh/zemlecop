@@ -25,6 +25,7 @@
 
 .uk-form-label {
   font-size: inherit;
+  line-height: 1.2;
 }
 
 .uk-form-stacked {
@@ -49,6 +50,30 @@
   font-style: italic;
 }
 
+.uk-radio-wrap,
+.uk-checkbox-wrap {
+  position: relative;
+  display: inline-block;
+  min-width: 130px;
+  padding-left: 40px;
+  line-height: 1.4;
+
+  .uk-radio,
+  .uk-checkbox {
+    position: absolute;
+    top: 2.5px;
+    left: 0;
+  }
+}
+
+.uk-radio,
+.uk-checkbox {
+  width: 20px;
+  height: 20px;
+  margin-top: 0;
+  cursor: pointer;
+}
+
 .uk-form {
   font-size: $font-size-medium;
 
@@ -58,5 +83,15 @@
     .uk-button {
       min-width: 160px;
     }
+  }
+}
+
+.uk-select:not([multiple]):not([size]) {
+  padding-right: 45px;
+}
+
+@media (max-width: $breakpoint-small-max) {
+  .uk-form {
+    font-size: inherit;
   }
 }

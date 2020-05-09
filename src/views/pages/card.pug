@@ -1,0 +1,140 @@
+extends ../layouts/default
+
+block vars
+    - var title = 'Корзина';
+    -
+        var tableBody = [
+            {
+                type: "Шурупы",
+                name: "Шуруп 1",
+                img: "./img/goods/20K.png",
+                carraro: "20K",
+                developer: "20К-23-31290",
+                weight: "0.12",
+                price: "560",
+                sum: "560"
+            },
+            {
+                type: "Маслянные насосы",
+                name: "Шуруп 2",
+                img: "./img/goods/20K.png",
+                carraro: "20K",
+                developer: "20К-23-31290",
+                weight: "0.12",
+                price: "560",
+                sum: "560"
+            },
+            {
+                type: "Болты",
+                name: "Шуруп 3",
+                img: "./img/goods/20K.png",
+                carraro: "20K",
+                developer: "20К-23-31290",
+                weight: "0.12",
+                price: "560",
+                sum: "560"
+            }
+        ]
+
+block main-section
+
+    section.main-wrapper__section
+        .uk-container
+            table.uk-table.catalog__content
+                thead.catalog__head
+                    tr
+                        th.catalog__img
+                        th.card-table__name Наименование
+                        th.card-table__col № по Carraro
+                        th.card-table__col Вес, кг
+                        th.card-table__col Цена, руб
+                        th.card-table__col Кол-во
+                        th.card-table__col Сумма, руб
+                        th.card-table__btn
+                tbody.catalog__list
+                    each item in tableBody
+                        tr
+                            td.catalog__img
+                                img(src=item.img alt=item.name)
+                            td.catalog__name
+                                a(href="./catalog-item.html")=item.name
+                            td
+                                span(class="display-inline-block uk-margin-small-right uk-text-muted uk-hidden@m") № по Carraro:
+                                span=item.carraro
+                            td
+                                span(class="display-inline-block uk-margin-small-right uk-text-muted uk-hidden@m") Вес, кг:
+                                span=item.weight
+                            td
+                                span(class="display-inline-block uk-margin-small-right uk-text-muted uk-hidden@m") Цена, руб:
+                                span=item.price
+                            td.catalog__number.card-table__number
+                                span(class="display-inline-block uk-margin-small-right uk-text-muted uk-hidden@m") Кол-во:
+                                input.uk-input.uk-form-small(type="text")
+                            td
+                                span(class="display-inline-block uk-margin-small-right uk-text-muted uk-hidden@m") Сумма, руб:
+                                span=item.sum
+                            td.catalog__btn.card-table__btn
+                                button(type="button" uk-close)
+            .card-sum.uk-margin-medium-top
+                .uk-grid.uk-grid-small.card-sum__row
+                    div Общий вес заказа:
+                    .uk-text-nowrap <b>234</b> кг
+                .uk-grid.card-sum__row
+                    div Итого:
+                    .uk-text-nowrap <span class="card-sum__price">2342</span> руб
+
+            .uk-margin-large-top
+                form.uk-form.uk-form-stacked.card-form
+                    .card-form__head Оформить заказ
+                    .card-form__body
+                        .uk-grid.uk-grid-medium(class="uk-child-width-1-3@s")
+                            .uk-margin-bottom
+                                label.uk-form-label(for="card-user-name") Имя
+                                    span.uk-text-primary &nbsp;*
+                                .uk-form-controls
+                                    input.uk-input(id="card-user-name" type="text" placeholder="Пример Примерович")
+                            .uk-margin-bottom
+                                label.uk-form-label(for="card-user-phone") Телефон
+                                    span.uk-text-primary &nbsp;*
+                                .uk-form-controls
+                                    input.uk-input(id="card-user-phone" type="phone" placeholder="+7 (___) ___-__-__")
+                            .uk-margin-bottom
+                                label.uk-form-label(for="card-user-email") E-mail
+                                    span.uk-text-primary &nbsp;*
+                                .uk-form-controls
+                                    input.uk-input(id="card-user-email" type="email" autocomplete="off" placeholder="example@gmail.com")
+
+                        .uk-margin-bottom
+                            label.uk-form-label(for="card-user-comment") Комментарий к заказу
+                            .uk-form-controls
+                                textarea.uk-textarea(id="card-user-comment" rows="4")
+
+                        div
+                            h3 Способ получения:
+                            .uk-grid
+                                .uk-margin-bottom
+                                    label.uk-radio-wrap
+                                        input.uk-radio(type="radio" name="card-shipment-type" value="Самовывоз" checked)
+                                        |Самовывоз
+                                .uk-margin-bottom
+                                    label.uk-radio-wrap
+                                        input.uk-radio(type="radio" name="card-shipment-type" value="Транспортной компанией")
+                                        |Транспортной компанией
+
+                        .uk-grid.uk-grid-medium(class="uk-child-width-1-2@s uk-child-width-1-3@l")
+                            .uk-margin-bottom
+                                label.uk-form-label(for="card-user-store") Выберите склад
+                                    span.uk-text-primary &nbsp;*
+                                .uk-form-controls
+                                    select.uk-select(id="card-user-store")
+                                        option(checked) Екатеринбург, ул. Примерная 34
+                                        option Екатеринбург, ул. Тестовая 34
+
+                        .uk-margin-bottom
+                            label.uk-checkbox-wrap
+                                input.uk-checkbox(type="checkbox")
+                                |Нажимая на кнопку <b>“Оформить заказ”</b> я соглашаюсь с <a href="#">условиями по обработке персональных данных</a>
+
+                        .uk-margin-bottom
+                            button.uk-button.uk-button-primary(type="submit")
+                                small Оформить заказ

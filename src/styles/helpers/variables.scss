@@ -46,3 +46,11 @@ $grid-large-gutter-horizontal-l: 100px;
 
 $global-border-radius: 2px;
 $global-transition: 0.1s ease-in-out;
+$form-radio-checked-background: transparent;
+$form-radio-checked-focus-background: transparent;
+$form-radio-checked-icon-color: #000;
+$form-radio-border: $global-border;
+$form-radio-focus-border: $global-border;
+$form-radio-checked-border: $global-border;
+$internal-form-radio-image: "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAiIGhlaWdodD0iMTAiIHZpZXdCb3g9IjAgMCAxMCAxMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iNSIgY3k9IjUiIHI9IjUiIGZpbGw9ImJsYWNrIi8+Cjwvc3ZnPgo=";
+$internal-form-select-image: "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTAiIGhlaWdodD0iNSIgdmlld0JveD0iMCAwIDEwIDUiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0wLjUgMC41TDUgNC41TDkuNSAwLjUiIHN0cm9rZT0iYmxhY2siIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgo8L3N2Zz4K";

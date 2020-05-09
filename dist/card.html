@@ -142,73 +142,154 @@
             <div class="uk-container">
               <ul class="uk-breadcrumb breadcrumbs__list">
                 <li><a href="/">Главная</a></li>
-                <li><a href="/catalog.html">Каталог запчастей</a></li>
-                <li><span>Маслянный насос</span></li>
+                <li><span>Корзина</span></li>
               </ul>
             </div>
           </div>
           <div class="uk-container">
             <div>
-              <h1>Маслянный насос</h1>
+              <h1>Корзина</h1>
             </div>
           </div>
         </div>
         <section class="main-wrapper__section">
           <div class="uk-container">
-            <div class="uk-grid uk-child-width-1-3 catalog-item">
-              <div></div>
-              <div>
-                <div class="uk-grid uk-flex-nowrap uk-margin-small catalog-item__param">
-                  <div class="catalog-item__param-title">№ производителя:</div>
-                  <div class="uk-text-bold">20K-23-31290</div>
-                </div>
-                <div class="uk-grid uk-flex-nowrap uk-margin-small catalog-item__param">
-                  <div class="catalog-item__param-title">Марка:</div>
-                  <div class="uk-text-bold">Komatsu</div>
-                </div>
-                <div class="catalog-item__availability uk-section-muted">
-                  <div class="uk-margin-bottom">Наличие:</div>
-                  <ul class="params">
-                    <li class="params__item">
-                      <div class="params__title">Екатеринбург</div>
-                      <div class="params__value">20</div>
-                    </li>
-                    <li class="params__item">
-                      <div class="params__title">Екатеринбург 2</div>
-                      <div class="params__value">4</div>
-                    </li>
-                    <li class="params__item">
-                      <div class="params__title">Москва</div>
-                      <div class="params__value">234</div>
-                    </li>
-                    <li class="params__item">
-                      <div class="params__title">Санкт-Петербург</div>
-                      <div class="params__value">0</div>
-                    </li>
-                  </ul>
-                </div>
+            <table class="uk-table catalog__content">
+              <thead class="catalog__head">
+                <tr>
+                  <th class="catalog__img"></th>
+                  <th class="card-table__name">Наименование</th>
+                  <th class="card-table__col">№ по Carraro</th>
+                  <th class="card-table__col">Вес, кг</th>
+                  <th class="card-table__col">Цена, руб</th>
+                  <th class="card-table__col">Кол-во</th>
+                  <th class="card-table__col">Сумма, руб</th>
+                  <th class="card-table__btn"></th>
+                </tr>
+              </thead>
+              <tbody class="catalog__list">
+                <tr>
+                  <td class="catalog__img"><img src="./img/goods/20K.png" alt="Шуруп 1"></td>
+                  <td class="catalog__name"><a href="./catalog-item.html">Шуруп 1</a></td>
+                  <td><span class="display-inline-block uk-margin-small-right uk-text-muted uk-hidden@m">№ по Carraro:</span><span>20K</span></td>
+                  <td><span class="display-inline-block uk-margin-small-right uk-text-muted uk-hidden@m">Вес, кг:</span><span>0.12</span></td>
+                  <td><span class="display-inline-block uk-margin-small-right uk-text-muted uk-hidden@m">Цена, руб:</span><span>560</span></td>
+                  <td class="catalog__number card-table__number"><span class="display-inline-block uk-margin-small-right uk-text-muted uk-hidden@m">Кол-во:</span>
+                    <input class="uk-input uk-form-small" type="text">
+                  </td>
+                  <td><span class="display-inline-block uk-margin-small-right uk-text-muted uk-hidden@m">Сумма, руб:</span><span>560</span></td>
+                  <td class="catalog__btn card-table__btn">
+                    <button type="button" uk-close></button>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="catalog__img"><img src="./img/goods/20K.png" alt="Шуруп 2"></td>
+                  <td class="catalog__name"><a href="./catalog-item.html">Шуруп 2</a></td>
+                  <td><span class="display-inline-block uk-margin-small-right uk-text-muted uk-hidden@m">№ по Carraro:</span><span>20K</span></td>
+                  <td><span class="display-inline-block uk-margin-small-right uk-text-muted uk-hidden@m">Вес, кг:</span><span>0.12</span></td>
+                  <td><span class="display-inline-block uk-margin-small-right uk-text-muted uk-hidden@m">Цена, руб:</span><span>560</span></td>
+                  <td class="catalog__number card-table__number"><span class="display-inline-block uk-margin-small-right uk-text-muted uk-hidden@m">Кол-во:</span>
+                    <input class="uk-input uk-form-small" type="text">
+                  </td>
+                  <td><span class="display-inline-block uk-margin-small-right uk-text-muted uk-hidden@m">Сумма, руб:</span><span>560</span></td>
+                  <td class="catalog__btn card-table__btn">
+                    <button type="button" uk-close></button>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="catalog__img"><img src="./img/goods/20K.png" alt="Шуруп 3"></td>
+                  <td class="catalog__name"><a href="./catalog-item.html">Шуруп 3</a></td>
+                  <td><span class="display-inline-block uk-margin-small-right uk-text-muted uk-hidden@m">№ по Carraro:</span><span>20K</span></td>
+                  <td><span class="display-inline-block uk-margin-small-right uk-text-muted uk-hidden@m">Вес, кг:</span><span>0.12</span></td>
+                  <td><span class="display-inline-block uk-margin-small-right uk-text-muted uk-hidden@m">Цена, руб:</span><span>560</span></td>
+                  <td class="catalog__number card-table__number"><span class="display-inline-block uk-margin-small-right uk-text-muted uk-hidden@m">Кол-во:</span>
+                    <input class="uk-input uk-form-small" type="text">
+                  </td>
+                  <td><span class="display-inline-block uk-margin-small-right uk-text-muted uk-hidden@m">Сумма, руб:</span><span>560</span></td>
+                  <td class="catalog__btn card-table__btn">
+                    <button type="button" uk-close></button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="card-sum uk-margin-medium-top">
+              <div class="uk-grid uk-grid-small card-sum__row">
+                <div>Общий вес заказа:</div>
+                <div class="uk-text-nowrap"><b>234</b> кг</div>
               </div>
-              <div></div>
+              <div class="uk-grid card-sum__row">
+                <div>Итого:</div>
+                <div class="uk-text-nowrap"><span class="card-sum__price">2342</span> руб</div>
+              </div>
             </div>
-            <div class="uk-margin-top">
-              <ul class="uk-tab" uk-tab>
-                <li class="uk-active"><a href="">Описание</a></li>
-                <li><a href="">Характеристики</a></li>
-                <li><a href="">Задать вопрос</a></li>
-              </ul>
-              <ul class="uk-switcher">
-                <li>
-                  Компания CARRARO создана в 1930 году и является одним из крупнейших мировым производителей трансмиссий для сельскохозяйственной, строительной, погрузочной и горно-добывающей техники.<br>
-                  Заводы CARRARO по производству компонентов для трансмиссий, а также трансмиссий в сборе расположены в Италии (7 заводов), Германии, США, Аргентине, Бразилии и Индии.
-                </li>
-                <li></li>
-                <li></li>
-              </ul>
+            <div class="uk-margin-large-top">
+              <form class="uk-form uk-form-stacked card-form">
+                <div class="card-form__head">Оформить заказ</div>
+                <div class="card-form__body">
+                  <div class="uk-grid uk-grid-medium uk-child-width-1-3@s">
+                    <div class="uk-margin-bottom">
+                      <label class="uk-form-label" for="card-user-name">Имя<span class="uk-text-primary">&nbsp;*</span></label>
+                      <div class="uk-form-controls">
+                        <input class="uk-input" id="card-user-name" type="text" placeholder="Пример Примерович">
+                      </div>
+                    </div>
+                    <div class="uk-margin-bottom">
+                      <label class="uk-form-label" for="card-user-phone">Телефон<span class="uk-text-primary">&nbsp;*</span></label>
+                      <div class="uk-form-controls">
+                        <input class="uk-input" id="card-user-phone" type="phone" placeholder="+7 (___) ___-__-__">
+                      </div>
+                    </div>
+                    <div class="uk-margin-bottom">
+                      <label class="uk-form-label" for="card-user-email">E-mail<span class="uk-text-primary">&nbsp;*</span></label>
+                      <div class="uk-form-controls">
+                        <input class="uk-input" id="card-user-email" type="email" autocomplete="off" placeholder="example@gmail.com">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="uk-margin-bottom">
+                    <label class="uk-form-label" for="card-user-comment">Комментарий к заказу</label>
+                    <div class="uk-form-controls">
+                      <textarea class="uk-textarea" id="card-user-comment" rows="4"></textarea>
+                    </div>
+                  </div>
+                  <div>
+                    <h3>Способ получения:</h3>
+                    <div class="uk-grid">
+                      <div class="uk-margin-bottom">
+                        <label class="uk-radio-wrap">
+                          <input class="uk-radio" type="radio" name="card-shipment-type" value="Самовывоз" checked>Самовывоз
+                        </label>
+                      </div>
+                      <div class="uk-margin-bottom">
+                        <label class="uk-radio-wrap">
+                          <input class="uk-radio" type="radio" name="card-shipment-type" value="Транспортной компанией">Транспортной компанией
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="uk-grid uk-grid-medium uk-child-width-1-2@s uk-child-width-1-3@l">
+                    <div class="uk-margin-bottom">
+                      <label class="uk-form-label" for="card-user-store">Выберите склад<span class="uk-text-primary">&nbsp;*</span></label>
+                      <div class="uk-form-controls">
+                        <select class="uk-select" id="card-user-store">
+                          <option checked>Екатеринбург, ул. Примерная 34</option>
+                          <option>Екатеринбург, ул. Тестовая 34</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="uk-margin-bottom">
+                    <label class="uk-checkbox-wrap">
+                      <input class="uk-checkbox" type="checkbox">Нажимая на кнопку <b>“Оформить заказ”</b> я соглашаюсь с <a href="#">условиями по обработке персональных данных</a>
+                    </label>
+                  </div>
+                  <div class="uk-margin-bottom">
+                    <button class="uk-button uk-button-primary" type="submit"><small>Оформить заказ</small></button>
+                  </div>
+                </div>
+              </form>
             </div>
           </div>
-        </section>
-        <section class="main-wrapper__section">
-          <div class="uk-container">Похожие товары</div>
         </section>
       </div>
       <footer class="main-footer">
