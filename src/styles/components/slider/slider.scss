@@ -1,0 +1,85 @@
+.slider {
+  color: $global-inverse-color;
+
+  &--big {
+    display: flex;
+    flex-direction: column;
+    flex: 1 0 auto;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1 0 auto;
+    padding-top: 65px;
+    padding-bottom: 85px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      display: block;
+      background: linear-gradient(90deg, rgba(0, 0, 0, 0.69) 0%, rgba(0, 0, 0, 0) 100%);
+    }
+  }
+  
+  &__wrap {
+    position: relative;
+  }
+
+  &__title {
+    font-size: 70px;
+    line-height: 1.2;
+    font-weight: 700;
+
+    span {
+      color: $global-primary-background;
+    }
+  }
+
+  &__text {
+    max-width: 520px;
+    margin-top: 15px;
+    font-size: 20px;
+  }
+
+  &__btns {
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: $breakpoint-small-max) {
+  .slider {
+    &__item {
+      padding-top: 30px;
+      padding-bottom: 40px;
+    }
+
+    &__title {
+      font-size: 50px;
+    }
+
+    &__text {
+      font-size: inherit;
+    }
+  }
+}
+
+@media (max-width: $breakpoint-xsmall-max) {
+  .slider {
+    &__title {
+      font-size: 32px;
+    }
+  }
+}
