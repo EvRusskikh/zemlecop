@@ -152,114 +152,116 @@
             </div>
           </div>
         </div>
-        <section class="main-wrapper__section">
-          <div class="uk-container">
-            <div class="catalog" uk-filter="target: .catalog__list">
-              <ul class="uk-margin-bottom uk-subnav catalog-filter">
-                <li class="uk-active" uk-filter-control><a href="#">Все</a></li>
-                <li uk-filter-control="[data-type='Шурупы']"><a href="#">Шурупы</a></li>
-                <li uk-filter-control="[data-type='Маслянные насосы']"><a href="#">Маслянные насосы</a></li>
-                <li uk-filter-control="[data-type='Болты']"><a href="#">Болты</a></li>
-              </ul>
-              <form class="catalog-search">
-                <div class="uk-position-relative"><span class="uk-form-icon uk-form-icon-flip">
-                    <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M13.8362 12.155L10.3527 8.97C11.0039 8.0275 11.3945 6.9225 11.3945 5.6875C11.3945 2.535 8.85517 0 5.69726 0C2.53935 0 0 2.535 0 5.6875C0 8.84 2.53935 11.375 5.69726 11.375C7.25994 11.375 8.69239 10.7575 9.70162 9.7175L13.1851 12.87C13.2828 12.9675 13.3804 13 13.5107 13C13.6409 13 13.7711 12.935 13.8688 12.8375C14.0641 12.6425 14.0315 12.3175 13.8362 12.155ZM5.69726 10.4C3.0928 10.4 0.976674 8.2875 0.976674 5.6875C0.976674 3.0875 3.0928 0.975 5.69726 0.975C8.30173 0.975 10.4179 3.0875 10.4179 5.6875C10.4179 8.2875 8.30173 10.4 5.69726 10.4Z" fill="#E31E24"></path>
-                    </svg></span>
-                  <input class="uk-input uk-input--search" placeholder="Введите номер детали ...">
-                </div>
-              </form>
-              <div class="catalog__result">По запросу “20K-323” найдено 3 результата:</div>
-              <table class="uk-table catalog__content">
-                <thead class="catalog__head">
-                  <tr>
-                    <th class="catalog__img"></th>
-                    <th class="catalog__name">Наименование</th>
-                    <th class="catalog__col1">№ по Carraro</th>
-                    <th class="catalog__col1">№ производителя</th>
-                    <th class="catalog__col2">Вес, кг</th>
-                    <th class="catalog__col3">Екб</th>
-                    <th class="catalog__col3">Екб 2</th>
-                    <th class="catalog__col3">Мск</th>
-                    <th class="catalog__col3">Спб</th>
-                    <th class="catalog__col2">Транзит</th>
-                    <th class="catalog__col2">Цена, руб</th>
-                    <th class="catalog__number">Кол-во</th>
-                    <th class="catalog__btn"></th>
-                  </tr>
-                </thead>
-                <tbody class="catalog__list">
-                  <tr data-type="Шурупы">
-                    <td class="catalog__img"><img src="./img/goods/20K.png" alt="Шуруп 1"></td>
-                    <td class="catalog__name"><a href="./catalog-item.html">Шуруп 1</a></td>
-                    <td><span class="display-inline-block uk-margin-small-right uk-text-muted uk-hidden@m">№ по Carraro:</span><span>20K</span></td>
-                    <td><span class="display-inline-block uk-margin-small-right uk-text-muted uk-hidden@m">№ производителя:</span><span>20К-23-31290</span></td>
-                    <td><span class="display-inline-block uk-margin-small-right uk-text-muted uk-hidden@m">Вес, кг:</span><span>0.12</span></td>
-                    <td><span class="display-inline-block uk-margin-small-right uk-text-muted uk-hidden@m">Екб:</span><span>0</span></td>
-                    <td><span class="display-inline-block uk-margin-small-right uk-text-muted uk-hidden@m">Екб 2:</span><span>0</span></td>
-                    <td><span class="display-inline-block uk-margin-small-right uk-text-muted uk-hidden@m">Мск:</span><span>23</span></td>
-                    <td><span class="display-inline-block uk-margin-small-right uk-text-muted uk-hidden@m">Спб:</span><span>5</span></td>
-                    <td><span class="display-inline-block uk-margin-small-right uk-text-muted uk-hidden@m">Транзит:</span><span>0</span></td>
-                    <td class="catalog__price"><span class="display-inline-block uk-margin-small-right uk-text-muted uk-hidden@m">Цена, руб:</span><span>560</span></td>
-                    <td class="catalog__number"><span class="display-inline-block uk-margin-small-right uk-text-muted uk-hidden@m">Кол-во:</span>
-                      <input class="uk-input uk-form-small" type="text">
-                    </td>
-                    <td class="catalog__btn">
-                      <button class="uk-button uk-button-primary uk-button-small uk-button-icon"><span class="uk-icon">
-                          <svg width="15" height="14" viewBox="0 0 15 14" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M4 0H0V1H3V11H4H14V10H4V9H5H6H14V8V3H15V2H4V1V0ZM13 3H12V8H13V3ZM11 3V8H10V3H11ZM9 3H8V8H9V3ZM7 3V8H6V3H7ZM5 3H4V8H5V3ZM6 12V14H4V12H6ZM13 14V12H11V14H13Z"></path>
-                          </svg></span></button>
-                    </td>
-                  </tr>
-                  <tr data-type="Маслянные насосы">
-                    <td class="catalog__img"><img src="./img/goods/20K.png" alt="Шуруп 2"></td>
-                    <td class="catalog__name"><a href="./catalog-item.html">Шуруп 2</a></td>
-                    <td><span class="display-inline-block uk-margin-small-right uk-text-muted uk-hidden@m">№ по Carraro:</span><span>20K</span></td>
-                    <td><span class="display-inline-block uk-margin-small-right uk-text-muted uk-hidden@m">№ производителя:</span><span>20К-23-31290</span></td>
-                    <td><span class="display-inline-block uk-margin-small-right uk-text-muted uk-hidden@m">Вес, кг:</span><span>0.12</span></td>
-                    <td><span class="display-inline-block uk-margin-small-right uk-text-muted uk-hidden@m">Екб:</span><span>0</span></td>
-                    <td><span class="display-inline-block uk-margin-small-right uk-text-muted uk-hidden@m">Екб 2:</span><span>0</span></td>
-                    <td><span class="display-inline-block uk-margin-small-right uk-text-muted uk-hidden@m">Мск:</span><span>23</span></td>
-                    <td><span class="display-inline-block uk-margin-small-right uk-text-muted uk-hidden@m">Спб:</span><span>5</span></td>
-                    <td><span class="display-inline-block uk-margin-small-right uk-text-muted uk-hidden@m">Транзит:</span><span>0</span></td>
-                    <td class="catalog__price"><span class="display-inline-block uk-margin-small-right uk-text-muted uk-hidden@m">Цена, руб:</span><span>560</span></td>
-                    <td class="catalog__number"><span class="display-inline-block uk-margin-small-right uk-text-muted uk-hidden@m">Кол-во:</span>
-                      <input class="uk-input uk-form-small" type="text">
-                    </td>
-                    <td class="catalog__btn">
-                      <button class="uk-button uk-button-primary uk-button-small uk-button-icon"><span class="uk-icon">
-                          <svg width="15" height="14" viewBox="0 0 15 14" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M4 0H0V1H3V11H4H14V10H4V9H5H6H14V8V3H15V2H4V1V0ZM13 3H12V8H13V3ZM11 3V8H10V3H11ZM9 3H8V8H9V3ZM7 3V8H6V3H7ZM5 3H4V8H5V3ZM6 12V14H4V12H6ZM13 14V12H11V14H13Z"></path>
-                          </svg></span></button>
-                    </td>
-                  </tr>
-                  <tr data-type="Болты">
-                    <td class="catalog__img"><img src="./img/goods/20K.png" alt="Шуруп 3"></td>
-                    <td class="catalog__name"><a href="./catalog-item.html">Шуруп 3</a></td>
-                    <td><span class="display-inline-block uk-margin-small-right uk-text-muted uk-hidden@m">№ по Carraro:</span><span>20K</span></td>
-                    <td><span class="display-inline-block uk-margin-small-right uk-text-muted uk-hidden@m">№ производителя:</span><span>20К-23-31290</span></td>
-                    <td><span class="display-inline-block uk-margin-small-right uk-text-muted uk-hidden@m">Вес, кг:</span><span>0.12</span></td>
-                    <td><span class="display-inline-block uk-margin-small-right uk-text-muted uk-hidden@m">Екб:</span><span>0</span></td>
-                    <td><span class="display-inline-block uk-margin-small-right uk-text-muted uk-hidden@m">Екб 2:</span><span>0</span></td>
-                    <td><span class="display-inline-block uk-margin-small-right uk-text-muted uk-hidden@m">Мск:</span><span>23</span></td>
-                    <td><span class="display-inline-block uk-margin-small-right uk-text-muted uk-hidden@m">Спб:</span><span>5</span></td>
-                    <td><span class="display-inline-block uk-margin-small-right uk-text-muted uk-hidden@m">Транзит:</span><span>0</span></td>
-                    <td class="catalog__price"><span class="display-inline-block uk-margin-small-right uk-text-muted uk-hidden@m">Цена, руб:</span><span>560</span></td>
-                    <td class="catalog__number"><span class="display-inline-block uk-margin-small-right uk-text-muted uk-hidden@m">Кол-во:</span>
-                      <input class="uk-input uk-form-small" type="text">
-                    </td>
-                    <td class="catalog__btn">
-                      <button class="uk-button uk-button-primary uk-button-small uk-button-icon"><span class="uk-icon">
-                          <svg width="15" height="14" viewBox="0 0 15 14" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M4 0H0V1H3V11H4H14V10H4V9H5H6H14V8V3H15V2H4V1V0ZM13 3H12V8H13V3ZM11 3V8H10V3H11ZM9 3H8V8H9V3ZM7 3V8H6V3H7ZM5 3H4V8H5V3ZM6 12V14H4V12H6ZM13 14V12H11V14H13Z"></path>
-                          </svg></span></button>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
+        <div>
+          <section class="main-wrapper__section">
+            <div class="uk-container">
+              <div class="catalog" uk-filter="target: .catalog__list">
+                <ul class="uk-margin-bottom uk-subnav catalog-filter">
+                  <li class="uk-active" uk-filter-control><a href="#">Все</a></li>
+                  <li uk-filter-control="[data-type='Шурупы']"><a href="#">Шурупы</a></li>
+                  <li uk-filter-control="[data-type='Маслянные насосы']"><a href="#">Маслянные насосы</a></li>
+                  <li uk-filter-control="[data-type='Болты']"><a href="#">Болты</a></li>
+                </ul>
+                <form class="catalog-search">
+                  <div class="uk-position-relative"><span class="uk-form-icon uk-form-icon-flip">
+                      <svg width="14" height="13" viewBox="0 0 14 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M13.8362 12.155L10.3527 8.97C11.0039 8.0275 11.3945 6.9225 11.3945 5.6875C11.3945 2.535 8.85517 0 5.69726 0C2.53935 0 0 2.535 0 5.6875C0 8.84 2.53935 11.375 5.69726 11.375C7.25994 11.375 8.69239 10.7575 9.70162 9.7175L13.1851 12.87C13.2828 12.9675 13.3804 13 13.5107 13C13.6409 13 13.7711 12.935 13.8688 12.8375C14.0641 12.6425 14.0315 12.3175 13.8362 12.155ZM5.69726 10.4C3.0928 10.4 0.976674 8.2875 0.976674 5.6875C0.976674 3.0875 3.0928 0.975 5.69726 0.975C8.30173 0.975 10.4179 3.0875 10.4179 5.6875C10.4179 8.2875 8.30173 10.4 5.69726 10.4Z" fill="#E31E24"></path>
+                      </svg></span>
+                    <input class="uk-input uk-input--search" placeholder="Введите номер детали ...">
+                  </div>
+                </form>
+                <div class="catalog__result">По запросу “20K-323” найдено 3 результата:</div>
+                <table class="uk-table catalog__content">
+                  <thead class="catalog__head">
+                    <tr>
+                      <th class="catalog__img"></th>
+                      <th class="catalog__name">Наименование</th>
+                      <th class="catalog__col1">№ по Carraro</th>
+                      <th class="catalog__col1">№ производителя</th>
+                      <th class="catalog__col2">Вес, кг</th>
+                      <th class="catalog__col3">Екб</th>
+                      <th class="catalog__col3">Екб 2</th>
+                      <th class="catalog__col3">Мск</th>
+                      <th class="catalog__col3">Спб</th>
+                      <th class="catalog__col2">Транзит</th>
+                      <th class="catalog__col2">Цена, руб</th>
+                      <th class="catalog__number">Кол-во</th>
+                      <th class="catalog__btn"></th>
+                    </tr>
+                  </thead>
+                  <tbody class="catalog__list">
+                    <tr data-type="Шурупы">
+                      <td class="catalog__img"><img src="./img/goods/20K.png" alt="Шуруп 1"></td>
+                      <td class="catalog__name"><a href="./catalog-item.html">Шуруп 1</a></td>
+                      <td><span class="display-inline-block uk-margin-small-right uk-text-muted uk-hidden@m">№ по Carraro:</span><span>20K</span></td>
+                      <td><span class="display-inline-block uk-margin-small-right uk-text-muted uk-hidden@m">№ производителя:</span><span>20К-23-31290</span></td>
+                      <td><span class="display-inline-block uk-margin-small-right uk-text-muted uk-hidden@m">Вес, кг:</span><span>0.12</span></td>
+                      <td><span class="display-inline-block uk-margin-small-right uk-text-muted uk-hidden@m">Екб:</span><span>0</span></td>
+                      <td><span class="display-inline-block uk-margin-small-right uk-text-muted uk-hidden@m">Екб 2:</span><span>0</span></td>
+                      <td><span class="display-inline-block uk-margin-small-right uk-text-muted uk-hidden@m">Мск:</span><span>23</span></td>
+                      <td><span class="display-inline-block uk-margin-small-right uk-text-muted uk-hidden@m">Спб:</span><span>5</span></td>
+                      <td><span class="display-inline-block uk-margin-small-right uk-text-muted uk-hidden@m">Транзит:</span><span>0</span></td>
+                      <td class="catalog__price"><span class="display-inline-block uk-margin-small-right uk-text-muted uk-hidden@m">Цена, руб:</span><span>560</span></td>
+                      <td class="catalog__number"><span class="display-inline-block uk-margin-small-right uk-text-muted uk-hidden@m">Кол-во:</span>
+                        <input class="uk-input uk-form-small" type="text">
+                      </td>
+                      <td class="catalog__btn">
+                        <button class="uk-button uk-button-primary uk-button-small uk-button-icon"><span class="uk-icon">
+                            <svg width="15" height="14" viewBox="0 0 15 14" xmlns="http://www.w3.org/2000/svg">
+                              <path fill-rule="evenodd" clip-rule="evenodd" d="M4 0H0V1H3V11H4H14V10H4V9H5H6H14V8V3H15V2H4V1V0ZM13 3H12V8H13V3ZM11 3V8H10V3H11ZM9 3H8V8H9V3ZM7 3V8H6V3H7ZM5 3H4V8H5V3ZM6 12V14H4V12H6ZM13 14V12H11V14H13Z"></path>
+                            </svg></span></button>
+                      </td>
+                    </tr>
+                    <tr data-type="Маслянные насосы">
+                      <td class="catalog__img"><img src="./img/goods/20K.png" alt="Шуруп 2"></td>
+                      <td class="catalog__name"><a href="./catalog-item.html">Шуруп 2</a></td>
+                      <td><span class="display-inline-block uk-margin-small-right uk-text-muted uk-hidden@m">№ по Carraro:</span><span>20K</span></td>
+                      <td><span class="display-inline-block uk-margin-small-right uk-text-muted uk-hidden@m">№ производителя:</span><span>20К-23-31290</span></td>
+                      <td><span class="display-inline-block uk-margin-small-right uk-text-muted uk-hidden@m">Вес, кг:</span><span>0.12</span></td>
+                      <td><span class="display-inline-block uk-margin-small-right uk-text-muted uk-hidden@m">Екб:</span><span>0</span></td>
+                      <td><span class="display-inline-block uk-margin-small-right uk-text-muted uk-hidden@m">Екб 2:</span><span>0</span></td>
+                      <td><span class="display-inline-block uk-margin-small-right uk-text-muted uk-hidden@m">Мск:</span><span>23</span></td>
+                      <td><span class="display-inline-block uk-margin-small-right uk-text-muted uk-hidden@m">Спб:</span><span>5</span></td>
+                      <td><span class="display-inline-block uk-margin-small-right uk-text-muted uk-hidden@m">Транзит:</span><span>0</span></td>
+                      <td class="catalog__price"><span class="display-inline-block uk-margin-small-right uk-text-muted uk-hidden@m">Цена, руб:</span><span>560</span></td>
+                      <td class="catalog__number"><span class="display-inline-block uk-margin-small-right uk-text-muted uk-hidden@m">Кол-во:</span>
+                        <input class="uk-input uk-form-small" type="text">
+                      </td>
+                      <td class="catalog__btn">
+                        <button class="uk-button uk-button-primary uk-button-small uk-button-icon"><span class="uk-icon">
+                            <svg width="15" height="14" viewBox="0 0 15 14" xmlns="http://www.w3.org/2000/svg">
+                              <path fill-rule="evenodd" clip-rule="evenodd" d="M4 0H0V1H3V11H4H14V10H4V9H5H6H14V8V3H15V2H4V1V0ZM13 3H12V8H13V3ZM11 3V8H10V3H11ZM9 3H8V8H9V3ZM7 3V8H6V3H7ZM5 3H4V8H5V3ZM6 12V14H4V12H6ZM13 14V12H11V14H13Z"></path>
+                            </svg></span></button>
+                      </td>
+                    </tr>
+                    <tr data-type="Болты">
+                      <td class="catalog__img"><img src="./img/goods/20K.png" alt="Шуруп 3"></td>
+                      <td class="catalog__name"><a href="./catalog-item.html">Шуруп 3</a></td>
+                      <td><span class="display-inline-block uk-margin-small-right uk-text-muted uk-hidden@m">№ по Carraro:</span><span>20K</span></td>
+                      <td><span class="display-inline-block uk-margin-small-right uk-text-muted uk-hidden@m">№ производителя:</span><span>20К-23-31290</span></td>
+                      <td><span class="display-inline-block uk-margin-small-right uk-text-muted uk-hidden@m">Вес, кг:</span><span>0.12</span></td>
+                      <td><span class="display-inline-block uk-margin-small-right uk-text-muted uk-hidden@m">Екб:</span><span>0</span></td>
+                      <td><span class="display-inline-block uk-margin-small-right uk-text-muted uk-hidden@m">Екб 2:</span><span>0</span></td>
+                      <td><span class="display-inline-block uk-margin-small-right uk-text-muted uk-hidden@m">Мск:</span><span>23</span></td>
+                      <td><span class="display-inline-block uk-margin-small-right uk-text-muted uk-hidden@m">Спб:</span><span>5</span></td>
+                      <td><span class="display-inline-block uk-margin-small-right uk-text-muted uk-hidden@m">Транзит:</span><span>0</span></td>
+                      <td class="catalog__price"><span class="display-inline-block uk-margin-small-right uk-text-muted uk-hidden@m">Цена, руб:</span><span>560</span></td>
+                      <td class="catalog__number"><span class="display-inline-block uk-margin-small-right uk-text-muted uk-hidden@m">Кол-во:</span>
+                        <input class="uk-input uk-form-small" type="text">
+                      </td>
+                      <td class="catalog__btn">
+                        <button class="uk-button uk-button-primary uk-button-small uk-button-icon"><span class="uk-icon">
+                            <svg width="15" height="14" viewBox="0 0 15 14" xmlns="http://www.w3.org/2000/svg">
+                              <path fill-rule="evenodd" clip-rule="evenodd" d="M4 0H0V1H3V11H4H14V10H4V9H5H6H14V8V3H15V2H4V1V0ZM13 3H12V8H13V3ZM11 3V8H10V3H11ZM9 3H8V8H9V3ZM7 3V8H6V3H7ZM5 3H4V8H5V3ZM6 12V14H4V12H6ZM13 14V12H11V14H13Z"></path>
+                            </svg></span></button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
-          </div>
-        </section>
+          </section>
+        </div>
       </div>
       <footer class="main-footer">
         <div class="uk-container">

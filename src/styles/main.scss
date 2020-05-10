@@ -24,11 +24,12 @@
   }
 
   &__section {
-    padding-top: 60px;
+    margin-top: 60px;
     margin-bottom: 60px;
     line-height: 1.9;
 
     &--border {
+      padding-top: 60px;
       border-top: 1px solid $global-border;
     }
   }
@@ -52,8 +53,12 @@
     }
 
     &__section {
-      padding-top: $global-gutter;
-      margin-bottom: $global-gutter;
+      margin-top: $global-gutter + 10px;
+      margin-bottom: $global-gutter + 10px;
+
+      &--border {
+        padding-top: $global-gutter + 10px;
+      }
     }
   }
 
@@ -73,6 +78,7 @@
 @import "components/form/form";
 @import "components/modal/modal";
 @import "components/slider/slider";
+@import "components/slider/big-slider";
 @import "components/articles/articles";
 @import "components/catalog/catalog";
 @import "components/catalog/catalog-filter";
@@ -80,3 +86,4 @@
 @import "components/pagination/pagination";
 @import "components/contacts/contacts";
 @import "components/card/card";
+@import "components/popular/popular";

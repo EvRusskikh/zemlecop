@@ -25,6 +25,7 @@
 
 .contacts-map {
   display: flex;
+  margin-top: 50px;
   margin-bottom: 210px;
 
   &__text {
@@ -62,6 +63,7 @@
 
 @media (max-width: $breakpoint-medium-max) {
   .contacts-map {
+    margin-top: 0;
     margin-bottom: 60px;
 
     &__text {

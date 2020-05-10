@@ -1,0 +1,160 @@
+.big-slider {
+  overflow: visible;
+
+  &__list {
+    min-height: calc(100vh - 208px - 223px);
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1 0 auto;
+    padding-top: 65px;
+    padding-bottom: 85px;
+    background-image: linear-gradient(90deg, #E4E2E2 0%, #F1F1F1 100%);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    &--img {
+      color: $global-inverse-color;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: block;
+        background: linear-gradient(90deg, rgba(0, 0, 0, 0.69) 0%, rgba(0, 0, 0, 0) 100%);
+      }
+    }
+  }
+  
+  &__link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+  }
+  
+  &__wrap {
+    position: relative;
+  }
+
+  &__title {
+    position: relative;
+    font-size: 70px;
+    line-height: 1.2;
+    font-weight: 700;
+
+    span {
+      color: $global-primary-background;
+    }
+  }
+
+  &__text {
+    position: relative;
+    margin-top: 15px;
+    font-size: 20px;
+  }
+
+  &__btns {
+    position: relative;
+    margin-top: 40px;
+  }
+
+  &__before {
+    position: relative;
+    margin-top: -25px;
+    margin-bottom: 15px;
+    font-size: $font-size-medium;
+    line-height: 1.2;
+  }
+
+  &__after {
+    position: relative;
+    margin-top: 30px;
+  }
+
+  &__image {
+    position: absolute;
+    right: -80px;
+    top: 83px;
+    max-width: calc(50% + 80px);
+  }
+
+  &__image + &__content {
+    max-width: 50%;
+  }
+
+  &__nav {
+    position: absolute;
+    bottom: 50px;
+    margin-top: 0;
+
+    > * {
+      > * {
+        border-color: $global-inverse-color;
+      }
+    }
+  }
+}
+
+@media (max-width: $breakpoint-medium-max) {
+  .big-slider {
+    &__list {
+      min-height: calc(100vh - 158px - 223px);
+    }
+  }
+}
+
+@media (max-width: $breakpoint-small-max) {
+  .big-slider {
+    &__list {
+      min-height: calc(100vh - 73px - 223px);
+    }
+
+    &__item {
+      padding-top: 30px;
+      padding-bottom: 40px;
+    }
+
+    &__title {
+      font-size: 50px;
+    }
+
+    &__text {
+      font-size: inherit;
+    }
+
+    &__btns {
+      margin-top: 20px;
+    }
+
+    &__nav {
+      margin-top: 0;
+      bottom: 20px;
+    }
+  }
+}
+
+@media (max-width: $breakpoint-xsmall-max) {
+  .big-slider {
+    &__list {
+      min-height: calc(100vh - 73px - 254px);
+    }
+
+    &__title {
+      font-size: 32px;
+    }
+
+    &__image + &__content {
+      max-width: none;
+    }
+  }
+}
