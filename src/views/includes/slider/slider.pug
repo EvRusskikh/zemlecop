@@ -1,0 +1,28 @@
+.uk-position-relative.uk-slider.uk-slider-container(uk-slider="autoplay: true;")
+    ul.uk-slider-items.uk-child-width-1-1.slider
+        each item in slides
+            li.slider__item(style=item.backgroundImg?"background-image: url('" + item.backgroundImg + "')":""
+                class=item.backgroundImg?"slider__item--img":"")
+                .slider__wrap
+                    .uk-container.uk-position-relative
+                        if item.image
+                            .slider__image
+                                img(src=item.image alt=item.title)
+                        .slider__content
+                            if item.before
+                                .slider__before!=item.before
+                            .slider__title!=item.title
+                            if item.text
+                                .slider__text!=item.text
+                            if item.after
+                                .slider__after!=item.after
+                            if item.btns
+                                .uk-grid.uk-grid-small.slider__btns(uk-grid)
+                                    each btn in item.btns
+                                        div
+                                            a.uk-button.uk-button-primary(href=btn.url)!=btn.title
+                if item.url
+                    a.slider__link(href=item.url)
+
+    .uk-position-relative.uk-container
+        ul.uk-slider-nav.uk-dotnav.slider__nav

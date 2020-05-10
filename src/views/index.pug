@@ -1,3 +1,34 @@
 extends layouts/main
 
+block vars
+    -
+        var slides = [
+            {
+                backgroundImg: "./img/banners/1.jpg",
+                title: "<span>Carraro Drive Tech</span><br/>на территории<br/>России",
+                before: "Официальный дистрибьютор",
+                url: "./about.html"
+            },
+            {
+                title: "Диггер-Про",
+                text: "<div class='uk-h2 uk-text-bold uk-text-uppercase uk-margin-remove'>Официальный представитель<br/>" +
+                        "DANA SPICER и CARRARO</div>",
+                image: "./img/banners/1176.png",
+                after: "<div class='uk-grid uk-child-width-1-2' uk-grid>" +
+                        "<div><img src='./img/banners/carraro.png' alt='carraro' class='uk-margin-right'></div>" +
+                        "<div><img src='./img/banners/spicer.png' alt='spicer'></div></div>"
+            },
+            {
+                title: "Диггер-Про",
+                text: "<div class='uk-h2 uk-text-bold uk-text-uppercase uk-margin-remove'>Официальный представитель<br/>" +
+                        "DANA SPICER и CARRARO</div>",
+                image: "./img/banners/2343.png",
+                after: "<div class='uk-grid uk-child-width-1-2' uk-grid>" +
+                        "<div><img src='./img/banners/carraro.png' alt='carraro' class='uk-margin-right'></div>" +
+                        "<div><img src='./img/banners/spicer.png' alt='spicer'></div></div>"
+            }
+        ];
+
 block content
+    include includes/slider/slider
+

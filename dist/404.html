@@ -137,17 +137,26 @@
         </div>
       </header>
       <div class="main-wrapper__container">
-        <ul class="slider slider--big">
-          <li class="slider__item" style="background-image: url('./img/banners/1.jpg');">
-            <div class="slider__wrap">
-              <div class="uk-container">
-                <div class="slider__title"><span>Ошибка 404</span><br/>Страница не найдена</div>
-                <div class="slider__text">К сожалению страница не найдена или не существует, пожалуйста перейдите на главную страницу</div>
-                <div class="slider__btns"><a class="uk-button uk-button-primary" href="./">На главную</a></div>
+        <div class="uk-position-relative uk-slider uk-slider-container" uk-slider="autoplay: true;">
+          <ul class="uk-slider-items uk-child-width-1-1 slider">
+            <li class="slider__item slider__item--img" style="background-image: url('./img/banners/1.jpg')">
+              <div class="slider__wrap">
+                <div class="uk-container uk-position-relative">
+                  <div class="slider__content">
+                    <div class="slider__title"><span>Ошибка 404</span><br/>Страница не найдена</div>
+                    <div class="slider__text">К сожалению страница не найдена или не существует,<br/>пожалуйста перейдите на главную страницу</div>
+                    <div class="uk-grid uk-grid-small slider__btns" uk-grid>
+                      <div><a class="uk-button uk-button-primary" href="./">На главную</a></div>
+                    </div>
+                  </div>
+                </div>
               </div>
-            </div>
-          </li>
-        </ul>
+            </li>
+          </ul>
+          <div class="uk-position-relative uk-container">
+            <ul class="uk-slider-nav uk-dotnav slider__nav"></ul>
+          </div>
+        </div>
       </div>
       <footer class="main-footer">
         <div class="uk-container">
