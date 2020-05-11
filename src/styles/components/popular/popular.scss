@@ -19,13 +19,11 @@
 
   &:hover,
   &:focus {
-    color: $global-inverse-color;
     text-decoration: none;
   }
 
   &:hover &__wrap,
   &:focus &__wrap {
-    background: $global-primary-background;
     border-color: $global-primary-background;
   }
 }

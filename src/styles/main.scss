@@ -32,6 +32,16 @@
       padding-top: 60px;
       border-top: 1px solid $global-border;
     }
+
+    &--color {
+      padding-top: 60px;
+      padding-bottom: 60px;
+      background-color: $global-fourth-background;
+    }
+
+    &--last-big {
+      margin-bottom: 150px;
+    }
   }
 
 }
@@ -59,6 +69,15 @@
       &--border {
         padding-top: $global-gutter + 10px;
       }
+
+      &--color {
+        padding-top: $global-gutter + 10px;
+        padding-bottom: $global-gutter + 10px;
+      }
+
+      &--last-big {
+        margin-bottom: 60px;
+      }
     }
   }
 
@@ -79,6 +98,7 @@
 @import "components/modal/modal";
 @import "components/slider/slider";
 @import "components/slider/big-slider";
+@import "components/lightbox/lightbox";
 @import "components/articles/articles";
 @import "components/catalog/catalog";
 @import "components/catalog/catalog-filter";
