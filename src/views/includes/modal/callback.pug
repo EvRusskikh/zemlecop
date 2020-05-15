@@ -1,0 +1,29 @@
+extends template
+
+block modal-vars
+    - var modalID = "modal-callback"
+    -
+        var form = [
+            {
+                label: "Ваше имя",
+                id: "callback-user-name",
+                placeholder: "",
+                recovery: true
+            },
+            {
+                label: "Телефон",
+                id: "callback-user-phone",
+                placeholder: "+7 (___) ___-__-__",
+                type: "phone",
+                recovery: true
+            },
+        ]
+
+block modal-title
+    | Заказать обратный звонок
+
+block modal-form-buttons
+    .uk-form-btns
+        .uk-grid.uk-grid-medium(uk-grid class="uk-child-width-1-1 uk-child-width-auto@s")
+            div
+                button.uk-button.uk-button-primary.uk-width-1-1(type="submit") Отправить

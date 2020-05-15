@@ -37,6 +37,18 @@
                       </div>
                     </form>
                   </div>
+                  <div class="uk-visible@l">
+                          <div class="main-header__contact">
+                            <div class="main-header__contact-city">Екатеринбург</div>
+                            <div class="main-header__contact-number"><a href="telto: +73432887587">+7 <span>(343)</span> 288-75-87</a></div>
+                          </div>
+                  </div>
+                  <div class="uk-visible@l">
+                          <div class="main-header__contact">
+                            <div class="main-header__contact-city">Москва</div>
+                            <div class="main-header__contact-number"><a href="telto: +74996538801">+7 <span>(499)</span> 653-88-01</a></div>
+                          </div>
+                  </div>
                   <div>
                           <div class="main-header__contact">
                             <select class="main-header__contact-city">
@@ -47,20 +59,8 @@
                             <div class="main-header__contact-number"><a href="telto: +78124486141">+7 <span>(812)</span> 448-61-41</a></div>
                           </div>
                   </div>
-                  <div class="uk-visible@l">
-                          <div class="main-header__contact">
-                            <div class="main-header__contact-city">Москва</div>
-                            <div class="main-header__contact-number"><a href="telto: +74996538801">+7 <span>(499)</span> 653-88-01</a></div>
-                          </div>
-                  </div>
-                  <div class="uk-visible@l">
-                          <div class="main-header__contact">
-                            <div class="main-header__contact-city">Екатеринбург</div>
-                            <div class="main-header__contact-number"><a href="telto: +73432887587">+7 <span>(343)</span> 288-75-87</a></div>
-                          </div>
-                  </div>
                   <div>
-                    <button class="uk-button uk-button-primary"><small>Заказать обратный звонок</small></button>
+                    <button class="uk-button uk-button-primary" type="button" uk-toggle="target: #modal-callback"><small>Заказать обратный звонок</small></button>
                   </div>
                 </div>
               </div>
@@ -75,9 +75,11 @@
                   <li class="top-menu__parent-item"><a class="uk-navbar-toggle"><span class="uk-visible@m" uk-navbar-toggle-icon></span><span class="top-menu__parent-text">Каталог запчастей</span><span class="uk-hidden@m" uk-icon="icon: chevron-down"></span></a>
                     <div class="uk-navbar-dropdown top-menu__dropdown" offset="0">
                       <ul class="uk-nav uk-navbar-dropdown-nav top-menu__dropdown-nav">
-                        <li><a href="#">Шурупы</a></li>
-                        <li><a href="#">Маслянные насосы</a></li>
-                        <li><a href="#">Болты</a></li>
+                        <li><a href="./catalog.html">Cararro</a></li>
+                        <li><a href="./catalog.html">Dana spicer</a></li>
+                        <li><a href="./catalog.html">KMP</a></li>
+                        <li><a href="./catalog.html">TEREX</a></li>
+                        <li><a href="./catalog.html">Bonfiglioli</a></li>
                       </ul>
                     </div>
                   </li>
@@ -118,7 +120,7 @@
                     </div>
                   </li>
                   <li class="uk-hidden@m">
-                    <div class="uk-margin uk-margin-small-top">
+                    <div class="uk-margin uk-margin-small-top" type="button" uk-toggle="target: #modal-callback">
                       <button class="uk-button uk-button-primary">Заказать обратный звонок</button>
                     </div>
                   </li>
@@ -317,7 +319,7 @@
               </ul>
             </nav>
             <div>
-              <button class="uk-button uk-button-primary"><small>Заказать обратный звонок</small></button>
+              <button class="uk-button uk-button-primary" type="button" uk-toggle="target: #modal-callback"><small>Заказать обратный звонок</small></button>
               <div class="uk-grid uk-grid-medium uk-flex-middle main-footer__developer">
                 <div><a class="main-footer__developer-logo" href="https://1pos.ru/" title="pos.ru" target="_blank"><img src="./img/ipos.png" alt="1pos"></a></div>
                 <div>Разработка<br/>и продвижение</div>
@@ -445,6 +447,35 @@
             <div class="uk-grid uk-grid-medium uk-child-width-1-1 uk-child-width-auto@s" uk-grid>
               <div>
                 <button class="uk-button uk-button-primary uk-width-1-1" type="submit">Зарегистрироваться</button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="uk-flex-top" id="modal-callback" uk-modal>
+      <div class="uk-modal-dialog uk-margin-auto-vertical uk-modal-body">
+        <button class="uk-modal-close-outside" type="button" uk-close></button>
+        <h2 class="uk-modal-title">Заказать обратный звонок</h2>
+        <form class="uk-form uk-form-stacked">
+          <div class="uk-margin">
+            <label class="uk-form-label" for="callback-user-name">Ваше имя<span class="uk-text-primary">&nbsp;*</span>
+            </label>
+            <div class="uk-form-controls">
+              <input class="uk-input" id="callback-user-name" type="text" placeholder="">
+            </div>
+          </div>
+          <div class="uk-margin">
+            <label class="uk-form-label" for="callback-user-phone">Телефон<span class="uk-text-primary">&nbsp;*</span>
+            </label>
+            <div class="uk-form-controls">
+              <input class="uk-input" id="callback-user-phone" type="phone" placeholder="+7 (___) ___-__-__">
+            </div>
+          </div>
+          <div class="uk-form-btns">
+            <div class="uk-grid uk-grid-medium uk-child-width-1-1 uk-child-width-auto@s" uk-grid>
+              <div>
+                <button class="uk-button uk-button-primary uk-width-1-1" type="submit">Отправить</button>
               </div>
             </div>
           </div>

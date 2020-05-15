@@ -1,0 +1,35 @@
+.over-header {
+  margin-bottom: 5px;
+  border-bottom: 1px solid $global-border;
+  text-align: center;
+
+  &__wrap {
+    padding: 10px 0;
+  }
+
+  &__img {
+    img {
+      margin-left: 15px;
+    }
+  }
+}
+
+@media (max-width: $breakpoint-large-max) {
+  .over-header {
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: $breakpoint-small-max) {
+  .over-header {
+    padding-top: 73px;
+
+    &__wrap {
+      padding: 15px 0;
+    }
+
+    &__img {
+      margin-top: 15px;
+    }
+  }
+}

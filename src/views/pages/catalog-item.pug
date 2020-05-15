@@ -10,10 +10,22 @@ block vars
                 {key: "Марка", value: "Komatsu"}
             ],
             availability: [
-                {city: "Екатеринбург", number: 20},
-                {city: "Екатеринбург 2", number: 4},
-                {city: "Москва", number: 234},
-                {city: "Санкт-Петербург", number: 0},
+                {title: "Екатеринбург", value: 'в наличии'},
+                {title: "Екатеринбург 2", value: 'в поставке'},
+                {title: "Москва", value: 'в наличии'},
+                {title: "Санкт-Петербург", value: 'в наличии'},
+            ],
+            basic: [
+                {title: "Максимальная мощность, кВт", value: "1,5"},
+                {title: "Основная мощность, кВт", value: "1,3"},
+                {title: "Напряжение", value: "220 В"},
+                {title: "Тип запуска", value: "Ручной"},
+            ],
+            sizes: [
+                {title: "Высота", value: "720"},
+                {title: "Ширина", value: "492"},
+                {title: "Глубина", value: "655"},
+                {title: "Вес", value: "30 кг"},
             ]
         }
 
@@ -29,11 +41,11 @@ block main-section
                             .uk-text-bold=item.value
                     .catalog-item__availability.uk-section-muted
                         .uk-margin-bottom Наличие:
-                        ul.params
+                        ul.params.params--small
                             each item in good.availability
                                 li.params__item
-                                    .params__title=item.city
-                                    .params__value=item.number
+                                    .params__title=item.title
+                                    .params__value=item.value
 
                 div
 
@@ -51,8 +63,46 @@ block main-section
                         | Компания CARRARO создана в 1930 году и является одним из крупнейших мировым производителей трансмиссий для сельскохозяйственной, строительной, погрузочной и горно-добывающей техники.<br>
                         | Заводы CARRARO по производству компонентов для трансмиссий, а также трансмиссий в сборе расположены в Италии (7 заводов), Германии, США, Аргентине, Бразилии и Индии.
                     li
+                        .uk-grid(class="uk-child-width-1-2@s")
+                            .uk-margin-bottom
+                                h4 Основные характеристики
+                                ul.params.uk-margin-medium-top
+                                    each item in good.basic
+                                        li.params__item
+                                            .params__title=item.title
+                                            .params__value=item.value
+
+                            .uk-margin-bottom
+                                h4 Размеры
+                                ul.params.uk-margin-medium-top
+                                    each item in good.sizes
+                                        li.params__item
+                                            .params__title=item.title
+                                            .params__value=item.value
                     li
+                        .uk-grid(class="uk-child-width-1-2@s")
+                            div
+                                .uk-grid.uk-grid-medium(class="uk-child-width-1-2@s")
+                                    .uk-margin-bottom
+                                        label.uk-form-label(for="question-user-name") Как вас зовут?
+                                        .uk-form-controls
+                                            input.uk-input(id="question-user-name" type="text" placeholder="Пример Примерович")
+                                    .uk-margin-bottom
+                                        label.uk-form-label(for="question-user-email") Ваш e-mail
+                                        .uk-form-controls
+                                            input.uk-input(id="question-user-email" type="email" autocomplete="off" placeholder="example@gmail.com")
+                                .uk-margin-bottom
+                                    label.uk-form-label(for="question-user-comment") Ваш вопрос
+                                    .uk-form-controls
+                                        textarea.uk-textarea(id="question-user-comment" rows="4")
+                                .uk-margin-medium-top
+                                    button.uk-button.uk-button-primary(type="submit")
+                                        small Задать вопрос
+
+
 
     section.main-wrapper__section
         .uk-container
-            |Похожие товары
+            h3 Популярные товары
+            .uk-margin-large-bottom
+                include ../includes/popular/popular

@@ -1,9 +1,11 @@
 -
     var mainMenu = [
         {title: "Каталог запчастей", url: "./catalog.html", children: [
-            {title: "Шурупы"},
-            {title: "Маслянные насосы"},
-            {title: "Болты"}
+            {title: "Cararro", url: "./catalog.html"},
+            {title: "Dana spicer", url: "./catalog.html"},
+            {title: "KMP", url: "./catalog.html"},
+            {title: "TEREX", url: "./catalog.html"},
+            {title: "Bonfiglioli", url: "./catalog.html"}
         ]},
         {title: "О компании", url: "./about.html"},
         {title: "Статьи", url: "./articles.html"},
@@ -29,6 +31,8 @@ html(class=htmlClass)
         script(src="./js/uikit-icons.min.js")
     body
         .main-wrapper
+            block over-header
+
             include ../includes/header/header
 
             .main-wrapper__container
@@ -40,3 +44,4 @@ html(class=htmlClass)
             include  ../includes/modal/login
             include  ../includes/modal/recover-password
             include  ../includes/modal/registration
+            include  ../includes/modal/callback

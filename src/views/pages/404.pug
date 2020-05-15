@@ -1,20 +1,14 @@
 extends ../layouts/main
 
-block vars
-    -
-        var slides = [
-            {
-                backgroundImg: "./img/banners/1.jpg",
-                title: "<span>Ошибка 404</span><br/>Страница не найдена",
-                text: "К сожалению страница не найдена или не существует,<br/>пожалуйста перейдите на главную страницу",
-                btns: [
-                    {
-                        title: "На главную",
-                        url: "./"
-                    }
-                ]
-            }
-        ];
-
 block content
-    include ../includes/slider/big-slider
+    .b-404
+        .b-404__item.b-404__item--img(style="background-image: url('./img/banners/1.jpg')")
+            .b-404__wrap
+                .uk-container.uk-position-relative
+                    .b-404__content
+                        .b-404__title <span>Ошибка 404</span><br/>Страница не найдена
+                        .b-404__text К сожалению страница не найдена или не существует,<br/>пожалуйста перейдите на главную страницу
+                        .uk-grid.uk-grid-small.b-404__btns(uk-grid)
+                            div
+                                a.uk-button.uk-button-primary(href='./') На главную
+

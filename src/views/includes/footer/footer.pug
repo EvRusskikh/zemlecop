@@ -13,7 +13,7 @@ footer.main-footer
                             else
                                 a(href=item.url ? item.url : '#')= item.title
             div
-                button.uk-button.uk-button-primary
+                button.uk-button.uk-button-primary(type="button" uk-toggle="target: #modal-callback")
                     small Заказать обратный звонок
                 div.uk-grid.uk-grid-medium.uk-flex-middle.main-footer__developer
                     div

@@ -17,17 +17,17 @@ header.main-header
                         .uk-flex-1
                             include ../catalog/catalog-search
 
-                        div
-                            +contact("Санкт-Петербург", "+78124486141", "+7 <span>(812)</span> 448-61-41", true)
+                        div(class="uk-visible@l")
+                            +contact("Екатеринбург", "+73432887587", "+7 <span>(343)</span> 288-75-87")
 
                         div(class="uk-visible@l")
                             +contact("Москва", "+74996538801", "+7 <span>(499)</span> 653-88-01")
 
-                        div(class="uk-visible@l")
-                            +contact("Екатеринбург", "+73432887587", "+7 <span>(343)</span> 288-75-87")
+                        div
+                            +contact("Санкт-Петербург", "+78124486141", "+7 <span>(812)</span> 448-61-41", true)
 
                         div
-                            button.uk-button.uk-button-primary
+                            button.uk-button.uk-button-primary(type="button" uk-toggle="target: #modal-callback")
                                 small Заказать обратный звонок
 
     include top-menu
