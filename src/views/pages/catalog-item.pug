@@ -50,7 +50,7 @@ block main-section
                 div
 
             .uk-margin-top
-                ul.uk-tab(uk-tab)
+                ul.uk-tab.uk-tab--default(uk-tab)
                     li.uk-active
                         a(href="") Описание
                     li
@@ -58,12 +58,12 @@ block main-section
                     li
                         a(href="") Задать вопрос
 
-                ul.uk-switcher
+                ul.uk-switcher.uk-switcher--default.uk-margin-large-top
                     li
                         | Компания CARRARO создана в 1930 году и является одним из крупнейших мировым производителей трансмиссий для сельскохозяйственной, строительной, погрузочной и горно-добывающей техники.<br>
                         | Заводы CARRARO по производству компонентов для трансмиссий, а также трансмиссий в сборе расположены в Италии (7 заводов), Германии, США, Аргентине, Бразилии и Индии.
                     li
-                        .uk-grid(class="uk-child-width-1-2@s")
+                        .uk-grid(class="uk-child-width-1-2@s" uk-grid)
                             .uk-margin-bottom
                                 h4 Основные характеристики
                                 ul.params.uk-margin-medium-top
@@ -81,18 +81,21 @@ block main-section
                                             .params__value=item.value
                     li
                         .uk-grid(class="uk-child-width-1-2@s")
-                            div
+                            form.uk-form.uk-form-stacked
                                 .uk-grid.uk-grid-medium(class="uk-child-width-1-2@s")
                                     .uk-margin-bottom
-                                        label.uk-form-label(for="question-user-name") Как вас зовут?
+                                        label.uk-form-label(for="question-user-name")
+                                            small Как вас зовут?
                                         .uk-form-controls
-                                            input.uk-input(id="question-user-name" type="text" placeholder="Пример Примерович")
+                                            input.uk-input(id="question-user-name" type="text")
                                     .uk-margin-bottom
-                                        label.uk-form-label(for="question-user-email") Ваш e-mail
+                                        label.uk-form-label(for="question-user-email")
+                                            small Ваш e-mail
                                         .uk-form-controls
-                                            input.uk-input(id="question-user-email" type="email" autocomplete="off" placeholder="example@gmail.com")
+                                            input.uk-input(id="question-user-email" type="email" autocomplete="off")
                                 .uk-margin-bottom
-                                    label.uk-form-label(for="question-user-comment") Ваш вопрос
+                                    label.uk-form-label(for="question-user-comment")
+                                        small Ваш вопрос
                                     .uk-form-controls
                                         textarea.uk-textarea(id="question-user-comment" rows="4")
                                 .uk-margin-medium-top
@@ -103,6 +106,15 @@ block main-section
 
     section.main-wrapper__section
         .uk-container
-            h3 Популярные товары
-            .uk-margin-large-bottom
-                include ../includes/popular/popular
+            .uk-margin-medium-top.uk-margin-large-bottom
+                ul.uk-tab.uk-tab--small(uk-tab)
+                    li.uk-active
+                        a(href="") Похожие товары
+                    li
+                        a(href="") Похожие товары
+
+                ul.uk-switcher
+                    li
+                        include ../includes/popular/popular
+                    li
+                        include ../includes/popular/popular

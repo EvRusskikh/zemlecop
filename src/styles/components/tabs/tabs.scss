@@ -1,0 +1,90 @@
+.uk-tab {
+  flex-wrap: nowrap;
+  overflow-x: auto;
+
+  > * {
+    > a {
+      font-size: inherit;
+      line-height: 1.6;
+      text-transform: none;
+      text-decoration: none;
+      color: inherit;
+    }
+  }
+
+  &--default {
+    margin-left: 0;
+
+    > * {
+      padding-left: 0;
+
+      > a {
+        padding: 15px $global-gutter;
+        background: $global-muted-background;
+        border: 1px solid transparent;
+        border-bottom-color: $global-border;
+        transition: $global-transition;
+
+        &:hover,
+        &:focus,
+        &:active {
+          background: $global-inverse-color;
+          border-color: $global-border;
+        }
+      }
+
+      &.uk-active {
+        > a {
+          background: $global-inverse-color;
+          border-color: $global-border;
+          border-bottom-color: transparent;
+        }
+      }
+    }
+  }
+  
+  &--small {
+    margin-left: 0;
+
+    &::before {
+      display: none;
+    }
+
+    > * {
+      padding-left: $global-gutter;
+
+      > a {
+        padding: 0 0 8px;
+        border-bottom-width: 2px;
+      }
+    }
+  }
+}
+
+.uk-switcher {
+  &--default {
+    padding: 0 $global-gutter;
+  }
+}
+
+@media (max-width: $breakpoint-small-max) {
+  .uk-tab {
+    &--default {
+      > * {
+        > a {
+          padding: 10px $global-small-gutter;
+        }
+      }
+    }
+
+    &--small {
+      margin-left: -$global-small-gutter;
+    }
+  }
+
+  .uk-switcher {
+    &--default {
+      padding: 0 $global-small-gutter;
+    }
+  }
+}
