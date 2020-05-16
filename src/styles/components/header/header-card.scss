@@ -35,11 +35,6 @@
     border-bottom-left-radius: $global-border-radius;
     background: $global-primary-background;
     transition: $global-transition;
-
-    svg {
-      position: relative;
-      left: -2px;
-    }
   }
 
   &__info {

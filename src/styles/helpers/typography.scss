@@ -17,6 +17,30 @@ h3, .uk-h3 {
   text-decoration: underline;
 }
 
+.uk-link--dotted {
+  color: $global-blue-color;
+  text-decoration: none;
+  border-bottom: 1px dashed;
+  
+  &:hover,
+  &:focus {
+    color: $global-blue-hover-color;
+    text-decoration: none;
+  }
+}
+
+.font-size-md {
+  font-size: $font-size-medium;
+}
+
+.font-size-sm {
+  font-size: $font-size-small;
+}
+
+.font-size-xs {
+  font-size: $font-size-xsmall;
+}
+
 blockquote,
 .uk-blockquote {
   padding: 10px 40px 10px 20px;

@@ -52,6 +52,33 @@
   }
 }
 
+.uk-icon-card {
+  svg {
+    position: relative;
+    top: -1px;
+    left: -2px;
+  }
+}
+
+.uk-flex-baseline {
+  align-items: baseline;
+}
+
+.uk-iconnav {
+  margin-left: -$global-margin;
+
+  > * {
+    padding-left: $global-margin;
+
+    > a {
+      &:hover,
+      &:focus {
+        color: $global-primary-background;
+      }
+    }
+  }
+}
+
 @media (min-width: $breakpoint-medium) {
   .main-page {
     .main-header__top {
@@ -129,4 +156,6 @@
 @import "components/contacts/contacts";
 @import "components/card/card";
 @import "components/popular/popular";
+@import "components/gallery/gallery";
+@import "components/params/params";
 @import "components/404/404";

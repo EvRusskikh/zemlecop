@@ -15,6 +15,8 @@ $form-focus-border: #9f9f9f;
 $form-placeholder-color: #bebebe;
 $global-link-color: $global-primary-background;
 $global-link-hover-color: darken($global-primary-background, 10%);
+$global-blue-color: #45a2f8;
+$global-blue-hover-color: darken($global-blue-color, 10%);
 
 /*BREAKPOINTS*/
 $breakpoint-xsmall: 480px;

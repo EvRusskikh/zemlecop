@@ -1,0 +1,20 @@
+form.uk-form.uk-form-stacked
+    .uk-grid.uk-grid-medium(class="uk-child-width-1-2@s")
+        .uk-margin-bottom
+            label.uk-form-label(for="question-user-name")
+                small Как вас зовут?
+            .uk-form-controls
+                input.uk-input(id="question-user-name" type="text")
+        .uk-margin-bottom
+            label.uk-form-label(for="question-user-email")
+                small Ваш e-mail
+            .uk-form-controls
+                input.uk-input(id="question-user-email" type="email" autocomplete="off")
+    .uk-margin-bottom
+        label.uk-form-label(for="question-user-comment")
+            small Ваш вопрос
+        .uk-form-controls
+            textarea.uk-textarea(id="question-user-comment" rows="4")
+    .uk-margin-medium-top
+        button.uk-button.uk-button-primary(type="submit")
+            small Задать вопрос

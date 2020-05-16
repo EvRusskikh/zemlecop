@@ -1,0 +1,32 @@
+-
+    var slides = [
+        "./img/goods/132.png",
+        "./img/goods/20K.png",
+        "./img/goods/132.png",
+        "./img/goods/20K.png",
+    ];
+
+div(uk-slideshow="animation: fade")
+    .uk-grid.uk-grid-small.gallery
+        div
+            div(uk-slider)
+                a.uk-icon.gallery__nav.gallery__nav--prev(href="#" uk-slider-item="previous")
+                    svg(width="7" height="7" viewBox="0 0 7 6" fill="none" xmlns="http://www.w3.org/2000/svg")
+                        path(d="M3.5 0L6.53109 5.25H0.468911L3.5 0Z" fill="#C4C4C4")
+                .uk-slider-container
+                    ul.uk-slider-items.uk-thumbnav.uk-thumbnav-vertical.gallery__thumbnav
+                        each slide, index in slides
+                            li.gallery__thumbnav-item(uk-slideshow-item=index)
+                                a(href="#").gallery__thumbnav-link
+                                    img(src=slide)
+                a.uk-icon.gallery__nav.gallery__nav--next(href="#" uk-slider-item="next")
+                    svg(width="7" height="7" viewBox="0 0 7 6" fill="none" xmlns="http://www.w3.org/2000/svg")
+                        path(d="M3.5 0L6.53109 5.25H0.468911L3.5 0Z" fill="#C4C4C4")
+
+        .uk-flex.uk-flex-1
+            ul.uk-slideshow-items.gallery__list
+                each slide in slides
+                    li.gallery__item
+                        .gallery__img
+                            img(src=slide)
+                        div.gallery__label Хит

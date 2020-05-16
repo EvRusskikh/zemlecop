@@ -32,9 +32,10 @@ block vars
 block main-section
     section.main-wrapper__section
         .uk-container
-            .uk-grid.uk-child-width-1-3.catalog-item
-                div
-                div
+            .uk-grid.uk-flex-between.uk-child-width-1-3.catalog-item
+                .catalog-item__col.catalog-item__col--gallery
+                    include ../includes/catalog-item/gallery
+                .catalog-item__col.catalog-item__col--params
                     each item in good.info
                         .uk-grid.uk-flex-nowrap.uk-margin-small.catalog-item__param
                             .catalog-item__param-title=item.key + ":"
@@ -47,62 +48,11 @@ block main-section
                                     .params__title=item.title
                                     .params__value=item.value
 
-                div
+                .catalog-item__col
+                    include ../includes/catalog-item/buttons
 
-            .uk-margin-top
-                ul.uk-tab.uk-tab--default(uk-tab)
-                    li.uk-active
-                        a(href="") Описание
-                    li
-                        a(href="") Характеристики
-                    li
-                        a(href="") Задать вопрос
-
-                ul.uk-switcher.uk-switcher--default.uk-margin-large-top
-                    li
-                        | Компания CARRARO создана в 1930 году и является одним из крупнейших мировым производителей трансмиссий для сельскохозяйственной, строительной, погрузочной и горно-добывающей техники.<br>
-                        | Заводы CARRARO по производству компонентов для трансмиссий, а также трансмиссий в сборе расположены в Италии (7 заводов), Германии, США, Аргентине, Бразилии и Индии.
-                    li
-                        .uk-grid(class="uk-child-width-1-2@s" uk-grid)
-                            .uk-margin-bottom
-                                h4 Основные характеристики
-                                ul.params.uk-margin-medium-top
-                                    each item in good.basic
-                                        li.params__item
-                                            .params__title=item.title
-                                            .params__value=item.value
-
-                            .uk-margin-bottom
-                                h4 Размеры
-                                ul.params.uk-margin-medium-top
-                                    each item in good.sizes
-                                        li.params__item
-                                            .params__title=item.title
-                                            .params__value=item.value
-                    li
-                        .uk-grid(class="uk-child-width-1-2@s")
-                            form.uk-form.uk-form-stacked
-                                .uk-grid.uk-grid-medium(class="uk-child-width-1-2@s")
-                                    .uk-margin-bottom
-                                        label.uk-form-label(for="question-user-name")
-                                            small Как вас зовут?
-                                        .uk-form-controls
-                                            input.uk-input(id="question-user-name" type="text")
-                                    .uk-margin-bottom
-                                        label.uk-form-label(for="question-user-email")
-                                            small Ваш e-mail
-                                        .uk-form-controls
-                                            input.uk-input(id="question-user-email" type="email" autocomplete="off")
-                                .uk-margin-bottom
-                                    label.uk-form-label(for="question-user-comment")
-                                        small Ваш вопрос
-                                    .uk-form-controls
-                                        textarea.uk-textarea(id="question-user-comment" rows="4")
-                                .uk-margin-medium-top
-                                    button.uk-button.uk-button-primary(type="submit")
-                                        small Задать вопрос
-
-
+            .uk-margin-medium-top
+                include ../includes/catalog-item/tabs
 
     section.main-wrapper__section
         .uk-container

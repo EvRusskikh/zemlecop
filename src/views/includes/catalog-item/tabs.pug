@@ -1,0 +1,32 @@
+ul.uk-tab.uk-tab--default(uk-tab)
+    li.uk-active
+        a(href="") Описание
+    li
+        a(href="") Характеристики
+    li
+        a(href="") Задать вопрос
+
+ul.uk-switcher.uk-switcher--default.uk-margin-large-top
+    li
+        | Компания CARRARO создана в 1930 году и является одним из крупнейших мировым производителей трансмиссий для сельскохозяйственной, строительной, погрузочной и горно-добывающей техники.<br>
+        | Заводы CARRARO по производству компонентов для трансмиссий, а также трансмиссий в сборе расположены в Италии (7 заводов), Германии, США, Аргентине, Бразилии и Индии.
+    li
+        .uk-grid(class="uk-child-width-1-2@s" uk-grid)
+            .uk-margin-bottom
+                h4 Основные характеристики
+                ul.params.uk-margin-medium-top
+                    each item in good.basic
+                        li.params__item
+                            .params__title=item.title
+                            .params__value=item.value
+
+            .uk-margin-bottom
+                h4 Размеры
+                ul.params.uk-margin-medium-top
+                    each item in good.sizes
+                        li.params__item
+                            .params__title=item.title
+                            .params__value=item.value
+    li
+        .uk-grid(class="uk-child-width-1-2@s")
+            include ../catalog/catalog-form
