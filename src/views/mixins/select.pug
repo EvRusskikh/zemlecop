@@ -1,0 +1,8 @@
+mixin select(options, selectedID, selectClass, id)
+    .custom-select(class=selectClass)
+        select.uk-select(id=id)
+            each item, index in options
+                if (index === selectedID)
+                    option(value=item selected="selected")=item
+                else
+                    option(value=item)=item

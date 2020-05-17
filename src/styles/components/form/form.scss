@@ -86,6 +86,10 @@
   }
 }
 
+.uk-select {
+  cursor: pointer;
+}
+
 .uk-select:not([multiple]):not([size]) {
   padding-right: 45px;
 }

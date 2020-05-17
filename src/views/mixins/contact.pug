@@ -1,10 +1,9 @@
+include select
+
 mixin contact(city, numberHref, number, select)
     .main-header__contact
         if select
-            select.main-header__contact-city
-                option Калининград
-                option Омск
-                option(selected="selected")=city
+            +select(["Калининград", "Омск", city], 2, "main-header__contact-city")
         else
             .main-header__contact-city= city
         .main-header__contact-number

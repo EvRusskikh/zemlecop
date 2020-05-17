@@ -1,4 +1,5 @@
 extends ../layouts/default
+include ../mixins/select
 
 block vars
     - var title = 'Корзина';
@@ -126,9 +127,7 @@ block main-section
                                 label.uk-form-label(for="card-user-store") Выберите склад
                                     span.uk-text-primary &nbsp;*
                                 .uk-form-controls
-                                    select.uk-select(id="card-user-store")
-                                        option(checked) Екатеринбург, ул. Примерная 34
-                                        option Екатеринбург, ул. Тестовая 34
+                                    +select(["Екатеринбург, ул. Примерная 34", "Екатеринбург, ул. Тестовая 34"], 0, "", "card-user-store")
 
                         .uk-margin-bottom
                             label.uk-checkbox-wrap

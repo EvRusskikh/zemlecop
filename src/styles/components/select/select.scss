@@ -1,0 +1,46 @@
+.custom-select {
+  position: relative;
+  cursor: pointer;
+
+  &__body {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+  
+  &__dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: $global-inverse-color;
+    border: 1px solid $global-border;
+    border-top: 0;
+    border-bottom-left-radius: $global-border-radius;
+    border-bottom-right-radius: $global-border-radius;
+    font-size: $global-font-size;
+    color: $global-color;
+    z-index: 1;
+    box-sizing: border-box;
+
+    div {
+      padding: $global-margin/2 $global-margin;
+      transition: $global-transition;
+      line-height: 1.2;
+
+      &:hover,
+      &.checked {
+        background: $global-muted-background;
+      }
+    }
+
+    &--hide {
+      display: none;
+    }
+  }
+
+  &--active &__body {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+}
