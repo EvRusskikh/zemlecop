@@ -19,7 +19,8 @@ const paths = {
     dist: './dist/',
     pug: './src/views/',
     sass: './src/styles/',
-    css: './dist/styles/'
+    css: './dist/styles/',
+    js: './src/js/'
 };
 
 function browserSync() {
@@ -72,10 +73,9 @@ function style() {
 }
 
 function script() {
-    return src(paths.app + '*.js')
+    return src(paths.js + '*.js')
         .pipe(concat('main.js'))
-        .pipe(uglify())
-        .pipe(dest(path.dist + 'js/'))
+        .pipe(dest(paths.dist + 'js/'))
         .on('end', browsersync.reload)
 }
 
@@ -101,7 +101,7 @@ function watchFiles() {
         series(style)
     );
     watch(
-        paths.app + '*.js',
+        paths.js + '*.js',
         { events: 'all', ignoreInitial: false },
         series(script)
     );
@@ -113,5 +113,6 @@ function watchFiles() {
 }
 
 exports.images = images;
+exports.script = script;
 exports.build = series(views, fonts, images, style, script);
 exports.default = parallel(fonts, browserSync, watchFiles);

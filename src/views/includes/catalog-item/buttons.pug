@@ -5,10 +5,10 @@
         .catalog-item__price <span>23 000</span> руб.
 .uk-grid.uk-grid-medium.uk-margin(uk-grid)
     div
-        .catalog-item__number
-            button.uk-button.catalog-item__number-button(type="button") -
-            input.catalog-item__number-input(type="text" value="34")
-            button.uk-button.catalog-item__number-button(type="button") +
+        .spinbutton
+            button.uk-button.spinbutton__button(type="button" aria-label="prev") -
+            input.spinbutton__input(type="text" value="34")
+            button.uk-button.spinbutton__button(type="button" aria-label="next") +
     div
         button.uk-button.uk-button-primary.catalog-item__btn(type="button")
             span.uk-icon.uk-icon-card.uk-margin-small-right

@@ -41,6 +41,10 @@ h3, .uk-h3 {
   font-size: $font-size-xsmall;
 }
 
+.font-size-default {
+  font-size: $global-font-size;
+}
+
 blockquote,
 .uk-blockquote {
   padding: 10px 40px 10px 20px;
