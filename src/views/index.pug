@@ -20,9 +20,12 @@ block content
     div
         section.main-wrapper__section
             .uk-container
-                h2.main-title Диггер-Про - официальный<br/>представитель DANA SPICER и CARRARO
+                h2 Популярные товары
+                include includes/popular/popular
 
-                .uk-grid.uk-grid-large.uk-margin-large-top(class="uk-child-width-1-2@s")
+        section.main-wrapper__section
+            .uk-container
+                .uk-grid.uk-grid-large(class="uk-child-width-1-2@s")
                     .uk-margin-medium-bottom
                         img(src="./img/banners/carraro.png" alt="carraro")
                         .uk-margin-top
@@ -37,11 +40,6 @@ block content
                             | Заводы CARRARO по производству компонентов для трансмиссий, а также трансмиссий в сборе расположены в Италии (7 заводов), Германии, США, Аргентине, Бразилии и Индии. Качество производимых запчастей CARRARO для трансмиссий соответствует самым высоким стандартам, так как CARRARO является разработчиком и поставщиком трансмиссий для многих производителей техники.
                         .uk-margin-top
                             a(href="#") посмотреть продукцию
-
-        section.main-wrapper__section
-            .uk-container
-                h2 Популярные товары
-                include includes/popular/popular
 
         section.main-wrapper__section.main-wrapper__section--border
             .uk-container

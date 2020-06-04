@@ -14,20 +14,21 @@ header.main-header
 
                 .uk-flex-1.main-header__right
                     .uk-grid.uk-flex-bottom.main-header__grid
-                        .uk-flex-1
+                        .uk-flex-1(class="uk-visible@m")
                             include ../catalog/catalog-search
 
-                        div(class="uk-visible@l")
+                        div(class="uk-visible@m")
                             +contact("Екатеринбург", "+73432887587", "+7 <span>(343)</span> 288-75-87")
 
-                        div(class="uk-visible@l")
+                        div(class="uk-visible@m")
                             +contact("Москва", "+74996538801", "+7 <span>(499)</span> 653-88-01")
 
-                        div
+                        div(class="uk-visible@m")
                             +contact("Санкт-Петербург", "+78124486141", "+7 <span>(812)</span> 448-61-41", true)
 
                         div
-                            button.uk-button.uk-button-primary(type="button" uk-toggle="target: #modal-callback")
-                                small Заказать обратный звонок
+                            button.uk-button.uk-button-primary.main-header__call(type="button" uk-toggle="target: #modal-callback")
+                                span(class="uk-hidden@l" uk-icon="receiver")
+                                small(class="uk-visible@l") Заказать обратный звонок
 
     include top-menu

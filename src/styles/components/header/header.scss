@@ -14,6 +14,10 @@
     padding: 0;
   }
 
+  &__logo {
+    display: block;
+  }
+
   .catalog-search {
     max-width: 260px;
   }
@@ -117,7 +121,40 @@
     }
 
     &__right {
-      padding-right: 60px;
+      padding-right: 40px + $global-small-gutter;
+    }
+
+    &__grid {
+      margin-left: -$global-small-gutter;
+
+      > * {
+        padding-left: $global-small-gutter;
+      }
+    }
+
+    &__logo {
+      max-width: 120px;
+    }
+
+    &__call {
+      width: 40px;
+      padding: 0 !important;
+
+      svg {
+        position: relative;
+        top: -2px;
+      }
+    }
+
+    &__contact-number {
+      margin-top: 4px;
+      font-size: $font-size-small;
+    }
+
+    .catalog-search {
+      .uk-input {
+        padding-left: $global-small-gutter;
+      }
     }
   }
 }
@@ -143,16 +180,15 @@
 
     &__left {
       width: 100%;
-      padding-right: 60px;
+      padding-right: 105px;
     }
 
     &__left &__grid {
-      padding-left: 60px;
+      padding-left: 105px;
       justify-content: center;
     }
 
     &__right {
-      display: none;
       padding-right: 0;
     }
 
@@ -165,6 +201,24 @@
     &__top {
       padding-top: $global-small-gutter;
       padding-bottom: $global-small-gutter;
+    }
+
+    &__logo {
+      max-width: none;
+    }
+
+    &__call {
+      position: absolute;
+      top: -40px;
+      right: 45px;
+    }
+  }
+}
+
+@media (max-width: $breakpoint-xsmall-max) {
+  .main-header {
+    &__left &__grid {
+      padding-left: 40px;
     }
   }
 }

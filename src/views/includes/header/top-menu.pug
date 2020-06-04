@@ -24,15 +24,15 @@
 
                     li(class="uk-hidden@m")
                         .uk-margin.uk-margin-small-top
+                            +contact("Екатеринбург", "+73432887587", "+7 <span>(343)</span> 288-75-87")
+                        .uk-margin.uk-margin-small-top
+                            +contact("Москва", "+74996538801", "+7 <span>(499)</span> 653-88-01")
+                        .uk-margin.uk-margin-small-top
                             +contact("Санкт-Петербург", "+78124486141", "+7 <span>(812)</span> 448-61-41", true)
 
                     li(class="uk-hidden@m")
                         div.uk-margin.uk-margin-small-top
                             include ../catalog/catalog-search
-
-                    li(class="uk-hidden@m")
-                        div.uk-margin.uk-margin-small-top(type="button" uk-toggle="target: #modal-callback")
-                            button.uk-button.uk-button-primary Заказать обратный звонок
 
             .uk-navbar-right
                 include card
