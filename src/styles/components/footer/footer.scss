@@ -7,9 +7,13 @@
   }
 
   &__developer {
+    position: absolute;
+    top: 0;
+    right: 30px;
     margin-top: 15px;
     font-size: $font-size-xxsmall;
     line-height: 1.4;
+    text-align: left;
   }
 
   &__logo,
@@ -23,7 +27,13 @@
     }
   }
   
+  &__social {
+    margin-top: 15px;
+    text-align: center;
+  }
+  
   &__copyright {
+    position: relative;
     padding: $global-margin 0;
     border-top: 1px solid $global-inverse-color;
     font-size: $font-size-xsmall;
@@ -64,6 +74,10 @@
     .uk-button {
       padding: 0 $global-small-gutter;
     }
+
+    &__developer {
+      right: 15px;
+    }
   }
 }
 
@@ -88,6 +102,13 @@
     &__top {
       padding-top: $global-gutter;
       padding-bottom: $global-gutter;
+      justify-content: center;
+    }
+
+    &__developer {
+      position: relative;
+      top: auto;
+      right: auto;
       justify-content: center;
     }
   }

@@ -18,12 +18,25 @@
     display: block;
   }
 
+  &__social {
+    padding-top: 7px;
+    padding-bottom: 8px;
+  }
+
   .catalog-search {
     max-width: 260px;
   }
 
   &__contact {
     line-height: $heading-small-line-height;
+  }
+
+  &__call-wrap {
+    padding-left: $global-small-gutter - 4px;
+  }
+
+  &__call {
+    padding: 0 20px;
   }
 
   &__contact-city {
@@ -107,8 +120,12 @@
       }
     }
 
-    .uk-button:not(.main-header__toggle) {
-      padding: 0 $global-small-gutter;
+    &__call-wrap {
+      padding-left: $global-small-gutter - 4px;
+    }
+
+    &__logo {
+      max-width: 120px;
     }
   }
 }
@@ -132,8 +149,8 @@
       }
     }
 
-    &__logo {
-      max-width: 120px;
+    &__call-wrap {
+      padding-left: $global-small-gutter - 4px;
     }
 
     &__call {

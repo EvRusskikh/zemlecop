@@ -8,6 +8,12 @@
     padding: 40px 70px 50px;
   }
 
+  &-small {
+    width: 470px;
+    padding: 45px 40px 30px;
+    line-height: 1.9;
+  }
+
   &-title {
     margin-bottom: 30px;
     font-size: 30px;
@@ -49,6 +55,10 @@
       border-bottom-left-radius: 0;
       border-bottom-right-radius: 0;
     }
+
+    &-small {
+      padding: 45px 40px 30px;
+    }
   }
 }
 
@@ -61,6 +71,10 @@
     &-title {
       margin-bottom: 20px;
       font-size: 24px;
+    }
+
+    &-small {
+      padding: 45px $global-margin $global-margin;
     }
   }
 }

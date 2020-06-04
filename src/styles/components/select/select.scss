@@ -3,9 +3,16 @@
   cursor: pointer;
 
   &__body {
+    position: relative;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
+
+    &::after {
+      content: '';
+      display: block;
+      border-bottom: 1px dashed $global-color;
+    }
   }
   
   &__dropdown {
@@ -42,5 +49,9 @@
   &--active &__body {
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
+
+    &::after {
+      border-bottom-color: transparent;
+    }
   }
 }

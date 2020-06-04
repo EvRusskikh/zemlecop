@@ -79,6 +79,17 @@
   }
 }
 
+.social-icon {
+  margin: 0 4px;
+  color: inherit;
+
+  &:hover,
+  &:focus {
+    color: inherit;
+    opacity: 0.7;
+  }
+}
+
 @media (min-width: $breakpoint-medium) {
   .main-page {
     .main-header__top {
